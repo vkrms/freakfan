@@ -1,0 +1,239 @@
+.whyfreakfan-main-wapper{
+    background-color: #fff4f4;
+}
+.whyfreakfan-main-wapper .container {
+    position: relative;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top{
+    position: relative;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-logo{
+    position: relative;
+    z-index: 999;
+    width: 318px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-logo .whyfreakfanlogo {
+    width: 100%;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content {
+    margin-left: 68px;
+    margin-top: 155px;
+    position: relative;
+    z-index: 999;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content h2{
+    font-family: 'Andada Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: capitalize;
+    color: #4E4E4E;
+    margin-bottom: 30px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content ul{
+    padding-left: 11px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content ul li{
+    font-family: 'Andada Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 154.52%;
+    text-transform: capitalize;
+    color: #A78D59;
+    opacity: 0.9;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content .be_a_freak{
+    border: 2px solid #C3A975;
+    border-radius: 10px;
+    padding: 7px 10px;
+    font-family: 'Andada Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150.52%;
+    text-transform: capitalize;
+    color: #C3A975;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 160px;
+    display: block;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content .be_a_freak:hover{
+    background-color: transparent;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content .be_a_freak img{
+    margin-left: 8px;
+    width: 18px;
+    height: 15px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .background-text .background-text {
+    margin-top: 45px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .background-text img{
+    width: 67%;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-content-wapper {
+    margin-top: 60px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-image {
+    position: absolute;
+    z-index: 99;
+    top: 44px;
+    width: 100%;
+    right: 0;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-image .bg-image{
+    width: 96%;
+    float: right;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-border {
+    position: absolute;
+    top: 31rem;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-border .whyfreakfanborder {
+    width: 100%;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom{
+    margin-top: 6rem;
+    display: flex;
+    position: relative;
+    z-index: 9999;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-logo {
+    width: 90%;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfanlogo {
+    width: 100%;
+    margin-top: 90px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content {
+    padding-left: 6rem;
+    margin-top: 6.5rem;
+  }
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content h2{
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 105.41%;
+    text-transform: capitalize;
+    color: #4E4E4E;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content ul{
+    padding-left: 11px;
+    margin-top: 25px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content ul li {
+    font-family: 'Andada Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 154.52%;
+    text-transform: capitalize;
+    color: #D86E96;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content .be_a_freak{
+    border: 2px solid #C3A975;
+    border-radius: 10px;
+    padding: 7px 10px;
+    font-family: 'Andada Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150.52%;
+    text-transform: capitalize;
+    color: #C3A975;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 140px;
+    display: block;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content .be_a_freak img {
+    margin-left: 8px;
+    width: 18px;
+    height: 15px;
+}
+.whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content .be_a_freak:hover{
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1170px) {
+    .background-text {
+        display: none;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content {
+        margin-left: 0px;
+        margin-top: 55px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .background-text{
+        display: none;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-image{
+        top: 13rem;
+        width: 60%;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-image .bg-image{
+        width: 100%;
+    }
+    .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content {
+        padding-left: 0px !important;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content .be_a_freak,
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content .be_a_freak{
+        width: 180px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-border .whyfreakfanborder{
+        display: none;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-image{
+        position: absolute;
+        right: 0;
+        width: 30%;
+        top: 19rem;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-image img{
+        width: 100%;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfanlogo {
+        width: 65%;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-logo {
+        width: 200px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content h2 {        
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-image{
+        display: none;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content ul li{
+        font-size: 17px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-top .whyfreakfan-content {
+        margin-top: 35px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-image{
+        display: none;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom {
+        margin-top: 5rem;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfanlogo {
+        margin-top: 15px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content {
+        margin-top: 3rem;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content h2 {
+        font-size: 28px;
+    }
+    .whyfreakfan-main-wapper .whyfreakfan-inner-wapper .whyfreakfan-bottom .whyfreakfan-bottom-content ul li {
+        font-size: 17px;
+    }
+}

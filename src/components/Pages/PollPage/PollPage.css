@@ -1,0 +1,42 @@
+.poll-container{
+
+}
+
+.add-poll-wapper form {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 45px;
+}
+.add-poll-wapper form .options-wapper,
+.add-poll-wapper form label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.add-poll-wapper form label span {
+    width: 15%;
+    font-size: 13px;
+}
+
+.add-poll-wapper form .options-wapper .options-wapper-inner,
+.add-poll-wapper form label input {
+    width: 75%;
+}
+.add-poll-wapper form label input {
+    font-size: 13px;
+    padding: 5px;
+}
+.add-poll-wapper form .options-wapper .options-wapper-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.add-poll-wapper form .options-wapper input{
+    width: 49%;
+}
+.add-poll-wapper form .btn{
+    width: 200px;
+    float: right;
+    display: block;
+    margin-top: 10px;
+}
