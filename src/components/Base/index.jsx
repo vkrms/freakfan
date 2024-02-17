@@ -198,8 +198,8 @@ const PrivateRoute = ({
 class App extends Component {
   constructor(props) {
     super(props);
-    let userId = localStorage.getItem("userId");
-    let accessToken = localStorage.getItem("accessToken");
+    let userId = localStorage?.getItem("userId") ?? null;
+    let accessToken = localStorage?.getItem("accessToken") ?? null;
     this.state = {
       loading: true,
       configLoading: true,
