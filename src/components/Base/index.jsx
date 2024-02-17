@@ -207,9 +207,9 @@ class App extends Component {
     };
 
     history.listen((location, action) => {
-      userId = localStorage.getItem("userId");
+      userId = localStorage?.getItem("userId");
 
-      accessToken = localStorage.getItem("accessToken");
+      accessToken = localStorage?.getItem("accessToken");
 
       this.setState({
         loading: true,
@@ -222,11 +222,9 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchConfig();
-    let userLanguage = localStorage.getItem("lang")
-      ? localStorage.getItem("lang")
-      : "en";
+    let userLanguage = localStorage?.getItem("lang") ?? "en";
     console.log(userLanguage);
-    localStorage.setItem("lang", userLanguage);
+    localStorage?.setItem("lang", userLanguage);
     setLanguage(userLanguage);
   }
 
