@@ -16,7 +16,13 @@ const publicKey = apiConstants.firbase_public_key;
 
 initializeApp(firebaseConfig);
 
-const messaging = getMessaging();
+let messaging
+
+try {
+  messaging = getMessaging();
+} catch (error) {
+  console.error(error.message)
+}
 
 export const requestForToken = () => {
     return getToken(messaging, { vapidKey: publicKey })
