@@ -53,7 +53,7 @@ const FeatureStoryModal = (props) => {
                                 <img src={props.fileData.previewVideo} alt="" />
                             ) : (
                                 <video
-                                    autoplay
+                                    autoPlay
                                     controls
                                     id="myVideo"
                                     className="user-profile1 w-100"

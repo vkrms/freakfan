@@ -620,7 +620,7 @@ const CreatePostIndex = (props) => {
                       <Col sm={12} md={12}>
                         <div key={index} className="post-img-preview-sec my-3 my-lg-4">
                           <video
-                            autoplay
+                            autoPlay
                             controls
                             id="myVideo"
                             className="user-profile1 create-post-video"

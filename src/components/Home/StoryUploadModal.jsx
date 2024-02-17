@@ -83,7 +83,7 @@ const StoryUploadModal = (props) => {
                   <img src={fileData.previewImage} alt="" />
                 ) : (
                   <video
-                    autoplay
+                    autoPlay
                     controls
                     id="myVideo"
                     className="user-profile1 w-100"

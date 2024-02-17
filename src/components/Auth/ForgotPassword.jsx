@@ -27,7 +27,7 @@ const ForgotPassword = (props) => {
       <div className="new-login-page-sec new-forgot-password-sec">
       <video
           className="bg-video-desktop"
-          autoplay="true"
+          autoPlay="true"
           loop="true"
           muted="true"
           playsInline
@@ -38,7 +38,7 @@ const ForgotPassword = (props) => {
         </video>
         <video
           className="bg-video-mobile"
-          autoplay="true"
+          autoPlay="true"
           loop="true"
           muted="true"
           playsInline
