@@ -230,7 +230,7 @@ class App extends Component {
 
   async fetchConfig() {
     try {
-      const response = await fetch(apiConstants.settingsUrl);
+      const response = await fetch(apiConstants.REACT_APP_SETTINGS_URL);
       const configValue = await response.json();
 
       configuration.set({ configData: configValue.data }, { freeze: false });

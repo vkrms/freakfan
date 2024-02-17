@@ -4,3 +4,4 @@ constants.jsx
 .DS_Store
 backup.zip
 temp.sh
+.env

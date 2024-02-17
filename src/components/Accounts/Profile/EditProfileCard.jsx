@@ -1361,5 +1361,5 @@ function mapDispatchToProps(dispatch) {
 const connector = connect(mapStateToPros, mapDispatchToProps)(translate(EditProfileCard));
 
 export default GoogleApiWrapper({
-  apiKey: apiConstants.google_api_key
+  apiKey: apiConstants.REACT_APP_GOOGLE_API_KEY
 })(connector);

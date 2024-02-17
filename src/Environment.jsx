@@ -62,10 +62,10 @@ const Environment = {
 
     // By Default added device type and login type in future use
     if (!socialLoginUser) {
-      formData.append("login_by", apiConstants.LOGIN_BY);
+      formData.append("login_by", apiConstants.REACT_APP_LOGIN_BY);
     }
 
-    formData.append("device_type", apiConstants.DEVICE_TYPE);
+    formData.append("device_type", apiConstants.REACT_APP_DEVICE_TYPE);
     
     var device_model = "";
     if(isAndroid==true){
@@ -131,8 +131,8 @@ const Environment = {
 
     // By Default added device type and login type in future use
 
-    formData.append("login_by", apiConstants.LOGIN_BY);
-    formData.append("device_type", apiConstants.DEVICE_TYPE);
+    formData.append("login_by", apiConstants.REACT_APP_LOGIN_BY);
+    formData.append("device_type", apiConstants.REACT_APP_DEVICE_TYPE);
 
     var device_model = "";
     if(isAndroid==true){

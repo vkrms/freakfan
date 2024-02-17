@@ -3,16 +3,16 @@ import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 import { apiConstants } from "./components/Constant/constants";
 
 var firebaseConfig = {
-    apiKey: apiConstants.firebase_api_key,
-    authDomain: apiConstants.firebase_auth_domain,
-    projectId: apiConstants.firebase_project_id,
-    storageBucket: apiConstants.firebase_storage_bucket,
-    messagingSenderId: apiConstants.firebase_messaging_sender_id,
-    appId: apiConstants.firebase_app_id,
-    measurementId: apiConstants.firebase_measurement_id,
+    apiKey: apiConstants.REACT_APP_FIREBASE_API_KEY,
+    authDomain: apiConstants.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: apiConstants.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: apiConstants.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: apiConstants.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: apiConstants.REACT_APP_FIREBASE_APP_ID,
+    measurementId: apiConstants.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-const publicKey = apiConstants.firbase_public_key;
+const publicKey = apiConstants.REACT_APP_FIREBASE_PUBLIC_KEY;
 
 initializeApp(firebaseConfig);
 
