@@ -6,7 +6,9 @@ import {
   getErrorNotificationMessage,
 } from "../../components/helper/NotificationMessage";
 
-const erroCode = [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007];
+// 1002 is for invalid token (not logged in)
+const erroCode = [1000, 1001, /*1002*/, 1003, 1004, 1005, 1006, 1007];
+
 
 function* logoutStatusCheck() {
   try {
