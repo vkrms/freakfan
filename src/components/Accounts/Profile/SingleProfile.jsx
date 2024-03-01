@@ -149,7 +149,7 @@ const SingleProfile = (props) => {
 
     const handleChatUser = (event, user_id) => {
         event.preventDefault();
-        if (!localStorage.getItem("userId")) {
+        if (!localStorage?.getItem("userId")) {
             const notificationMessage = getErrorNotificationMessage(
                 t('login_to_continue')
             );
@@ -157,7 +157,7 @@ const SingleProfile = (props) => {
         } else {
             props.dispatch(
                 saveChatUserStart({
-                    from_user_id: localStorage.getItem("userId"),
+                    from_user_id: localStorage?.getItem("userId"),
                     to_user_id: user_id,
                 })
             );
@@ -172,7 +172,7 @@ const SingleProfile = (props) => {
         is_free = 0
     ) => {
         event.preventDefault();
-        if (localStorage.getItem("userId")) {
+        if (localStorage?.getItem("userId")) {
             setSubscriptionData({
                 ...subscriptionData,
                 is_free: is_free,
@@ -482,7 +482,7 @@ const SingleProfile = (props) => {
                                         {/* <Media as="li">
                                             <Link to="#"
                                                 onClick={() => {
-                                                    if (localStorage.getItem("userId")) {
+                                                    if (localStorage?.getItem("userId")) {
                                                         setRequestVideoCall(true);
                                                     } else {
                                                         const notificationMessage = getErrorNotificationMessage(
@@ -505,7 +505,7 @@ const SingleProfile = (props) => {
                                         {/* <Media as="li">
                                             <Link to="#"
                                                 onClick={() => {
-                                                    if (localStorage.getItem("userId")) {
+                                                    if (localStorage?.getItem("userId")) {
                                                         setRequestAudioCall(true)
                                                     } else {
                                                         const notificationMessage = getErrorNotificationMessage(
@@ -529,7 +529,7 @@ const SingleProfile = (props) => {
                                         <Media as="li">
                                             <Link to="#"
                                                 onClick={() => {
-                                                    if (localStorage.getItem("userId")) {
+                                                    if (localStorage?.getItem("userId")) {
                                                         setSendTip(true)
                                                     } else {
                                                         const notificationMessage = getErrorNotificationMessage(
@@ -1016,7 +1016,7 @@ const SingleProfile = (props) => {
                                                     <div
                                                         className="subscription-btn"
                                                         onClick={(event) => {
-                                                            if (localStorage.getItem("userId")) {
+                                                            if (localStorage?.getItem("userId")) {
                                                                 props.dispatch(
                                                                     subscriptionPaymentStripeStart({
                                                                         user_unique_id:
@@ -1055,10 +1055,10 @@ const SingleProfile = (props) => {
                                                         backdrop="static"
                                                         keyboard={false}
                                                         centered
-                                                        className={`${localStorage.getItem("theme") !== "" &&
-                                                            localStorage.getItem("theme") !== null &&
-                                                            localStorage.getItem("theme") !== undefined &&
-                                                            localStorage.getItem("theme") === "dark" ?
+                                                        className={`${localStorage?.getItem("theme") !== "" &&
+                                                            localStorage?.getItem("theme") !== null &&
+                                                            localStorage?.getItem("theme") !== undefined &&
+                                                            localStorage?.getItem("theme") === "dark" ?
                                                             "dark-theme-modal" : ""
                                                             }
         `}
@@ -1117,7 +1117,7 @@ const SingleProfile = (props) => {
                                             {/* <Media as="li">
                                                 <Link to="#"
                                                     onClick={() => {
-                                                        if (localStorage.getItem("userId")) {
+                                                        if (localStorage?.getItem("userId")) {
                                                             setRequestVideoCall(true);
                                                         } else {
                                                             const notificationMessage = getErrorNotificationMessage(
@@ -1140,7 +1140,7 @@ const SingleProfile = (props) => {
                                             {/* <Media as="li">
                                                 <Link to="#"
                                                     onClick={() => {
-                                                        if (localStorage.getItem("userId")) {
+                                                        if (localStorage?.getItem("userId")) {
                                                             setRequestAudioCall(true)
                                                         } else {
                                                             const notificationMessage = getErrorNotificationMessage(
@@ -1164,7 +1164,7 @@ const SingleProfile = (props) => {
                                             <Media as="li">
                                                 <Link to="#"
                                                     onClick={() => {
-                                                        if (localStorage.getItem("userId")) {
+                                                        if (localStorage?.getItem("userId")) {
                                                             setSendTip(true)
                                                         } else {
                                                             const notificationMessage = getErrorNotificationMessage(
@@ -1514,9 +1514,9 @@ const SingleProfile = (props) => {
             {
                 userDetails.loading ? (
                     t("loading")
-                ) : localStorage.getItem("userId") !== "" &&
-                    localStorage.getItem("userId") !== null &&
-                    localStorage.getItem("userId") !== undefined ? (
+                ) : localStorage?.getItem("userId") !== "" &&
+                    localStorage?.getItem("userId") !== null &&
+                    localStorage?.getItem("userId") !== undefined ? (
                     <>
                         {/* <SendTipModal
                             sendTip={sendTip}

@@ -225,7 +225,7 @@ const NewSingleCommentIndex = (props) => {
                           </div>
                         </div>
                         <div className="new-feed-user-btn-sec">
-                          {localStorage.getItem("userId") !=
+                          {localStorage?.getItem("userId") !=
                           props.singlePost.data.post.user_id ? (
                             <Button
                               className="sent-tip-btn"
@@ -269,7 +269,7 @@ const NewSingleCommentIndex = (props) => {
                                 </Media>
                               </CopyToClipboard>
                               <Media as="li" className="divider"></Media>
-                              {localStorage.getItem("userId") ==
+                              {localStorage?.getItem("userId") ==
                               props.singlePost.data.post.user_id ? (
                                 //Own post
                                 <Media as="li">

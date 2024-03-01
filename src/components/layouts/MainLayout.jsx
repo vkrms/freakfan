@@ -10,16 +10,16 @@ const MainLayout = (props) => {
   let history = useHistory();
 
   const [themeState, setThemeState] = useState(
-    localStorage.getItem("theme") !== "" &&
-      localStorage.getItem("theme") !== null &&
-      localStorage.getItem("theme") !== undefined &&
-      localStorage.getItem("theme") === "dark" ?
+    localStorage?.getItem("theme") !== "" &&
+      localStorage?.getItem("theme") !== null &&
+      localStorage?.getItem("theme") !== undefined &&
+      localStorage?.getItem("theme") === "dark" ?
       true
       : false
   );
 
   const toggleClass = () => {
-    localStorage.setItem("theme", themeState ? "light" : "dark");
+    localStorage?.setItem("theme", themeState ? "light" : "dark");
     setThemeState(!themeState);
   };
 

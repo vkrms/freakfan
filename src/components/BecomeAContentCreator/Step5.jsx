@@ -104,7 +104,7 @@ const Step5 = (props) => {
                   name="monthly_amount"
                   className="form-control edit-reset"
                   disabled={
-                    localStorage.getItem("is_subscription_enabled") == 1
+                    localStorage?.getItem("is_subscription_enabled") == 1
                       ? false
                       : true
                   }
@@ -151,7 +151,7 @@ const Step5 = (props) => {
                   name="yearly_amount"
                   className="form-control edit-reset"
                   disabled={
-                    localStorage.getItem("is_subscription_enabled") == 1
+                    localStorage?.getItem("is_subscription_enabled") == 1
                       ? false
                       : true
                   }

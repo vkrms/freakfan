@@ -29,10 +29,10 @@ const ModelProfilePhotoSec = (props) => {
                   <Media as="li" className="box">
                     <div className="inner">
                       <Link 
-                        to={localStorage.getItem("userId") ? "/post/" + post.post_unique_id : '#'}
+                        to={localStorage?.getItem("userId") ? "/post/" + post.post_unique_id : '#'}
                         onClick= {() =>
                           {
-                            if(!localStorage.getItem("userId")) {
+                            if(!localStorage?.getItem("userId")) {
                               
                               const notificationMessage = getErrorNotificationMessage(
                                 t('login_to_continue')

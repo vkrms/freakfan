@@ -58,8 +58,8 @@ const LiveStreamingComments = (props) => {
   window.onbeforeunload = function (e) {
     if (!props.isOwner) {
       chatSocket.emit("livestream-exit", {
-        viewer_id: localStorage.getItem("userId"),
-        user_id: localStorage.getItem("userId"),
+        viewer_id: localStorage?.getItem("userId"),
+        user_id: localStorage?.getItem("userId"),
         live_video_id: props.liveVideoId,
         live_user_id: props.liveVideoDetails.user_id,
         eventType: "exit",
@@ -126,15 +126,15 @@ const LiveStreamingComments = (props) => {
       if (!props.isOwner) {
         console.log("viewer joined");
         const emitUser = {
-          viewer_id: localStorage.getItem("userId"),
+          viewer_id: localStorage?.getItem("userId"),
           live_video_id: props.liveVideoId,
           live_user_id: props.liveVideoDetails.user_id,
-          sender_name: localStorage.getItem("name"),
-          sender_username: localStorage.getItem("username"),
-          sender_picture: localStorage.getItem("user_picture"),
+          sender_name: localStorage?.getItem("name"),
+          sender_username: localStorage?.getItem("username"),
+          sender_picture: localStorage?.getItem("user_picture"),
           eventType: "join",
-          user_id: localStorage.getItem("userId"),
-          user_unique_id: localStorage.getItem("user_unique_id"),
+          user_id: localStorage?.getItem("userId"),
+          user_unique_id: localStorage?.getItem("user_unique_id"),
         };
 
         chatSocket.emit("livestream-join", {
@@ -161,11 +161,11 @@ const LiveStreamingComments = (props) => {
       let chatData = [
         {
           live_video_id: props.liveVideoId,
-          user_id: localStorage.getItem("userId"),
+          user_id: localStorage?.getItem("userId"),
           message: inputMessage,
-          sender_name: localStorage.getItem("name"),
-          sender_username: localStorage.getItem("username"),
-          sender_picture: localStorage.getItem("user_picture"),
+          sender_name: localStorage?.getItem("name"),
+          sender_username: localStorage?.getItem("username"),
+          sender_picture: localStorage?.getItem("user_picture"),
         },
       ];
       chatSocket.emit("livestream-broadcast-message", chatData[0]);
@@ -256,8 +256,8 @@ const LiveStreamingComments = (props) => {
       props.isOwner
     ) {
       chatSocket.emit("livestream-exit", {
-        viewer_id: localStorage.getItem("userId"),
-        user_id: localStorage.getItem("userId"),
+        viewer_id: localStorage?.getItem("userId"),
+        user_id: localStorage?.getItem("userId"),
         live_video_id: props.liveVideoId,
         live_user_id: props.liveVideoDetails.user_id,
         eventType: "end",

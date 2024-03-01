@@ -275,7 +275,7 @@ const CreatePostIndex = (props) => {
   return (
     <div className="notification-page create-post" id="tabs">
       <Container>
-        {localStorage.getItem("is_content_creator") == 2 ? (
+        {localStorage?.getItem("is_content_creator") == 2 ? (
           <div className="create-post-box">
             <Form onSubmit={handleSubmit}>
               <Row>
@@ -297,7 +297,7 @@ const CreatePostIndex = (props) => {
                       </Link>
                     </div>
                     <div className="pull-right">
-                      {localStorage.getItem("is_content_creator") == 2 ? (
+                      {localStorage?.getItem("is_content_creator") == 2 ? (
                         <Button
                           type="submit"
                           className="btn gradient-btn postBtn gradientcolor text-uppercase mt-0 mt-md-3"
@@ -484,7 +484,7 @@ const CreatePostIndex = (props) => {
                 </Col>
 
                 <Col sm={12} md={6} className="mt-3 mt-lg-4">
-                  {localStorage.getItem("is_content_creator") == 2 ? (
+                  {localStorage?.getItem("is_content_creator") == 2 ? (
                     <div className="left-half post-write">
                       <Button>
                         <Form.Group className="mb-0">
@@ -663,7 +663,7 @@ const CreatePostIndex = (props) => {
           ""
         )}{" "}
       </Container>
-      {localStorage.getItem("is_content_creator") != 2 && (
+      {localStorage?.getItem("is_content_creator") != 2 && (
         <ContentCreatorSteps />
       )}
     </div>

@@ -556,7 +556,7 @@ const EditProfileCard = (props) => {
                 name="monthly_amount"
                 className="form-control edit-reset"
                 disabled={
-                  localStorage.getItem("is_subscription_enabled") == 1
+                  localStorage?.getItem("is_subscription_enabled") == 1
                     ? false
                     : true
                 }
@@ -600,7 +600,7 @@ const EditProfileCard = (props) => {
                 name="yearly_amount"
                 className="form-control edit-reset"
                 disabled={
-                  localStorage.getItem("is_subscription_enabled") == 1
+                  localStorage?.getItem("is_subscription_enabled") == 1
                     ? false
                     : true
                 }
@@ -615,7 +615,7 @@ const EditProfileCard = (props) => {
                 }}
               />
             </div>
-            {localStorage.getItem("is_subscription_enabled") == 1 ? (
+            {localStorage?.getItem("is_subscription_enabled") == 1 ? (
               <p className="inuput-help">
                 {t("you_can_change_the")}
                 <Link to={`/add-bank`}>
@@ -663,7 +663,7 @@ const EditProfileCard = (props) => {
                 name="video_call_amount"
                 className="form-control edit-reset"
                 disabled={
-                  localStorage.getItem("is_subscription_enabled") == 1
+                  localStorage?.getItem("is_subscription_enabled") == 1
                     ? false
                     : true
                 }
@@ -707,7 +707,7 @@ const EditProfileCard = (props) => {
                 name="audio_call_amount"
                 className="form-control edit-reset"
                 disabled={
-                  localStorage.getItem("is_subscription_enabled") == 1
+                  localStorage?.getItem("is_subscription_enabled") == 1
                     ? false
                     : true
                 }

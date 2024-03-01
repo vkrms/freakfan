@@ -15,7 +15,7 @@ const ChatAssetModal = (props) => {
     if (Object.keys(chatAssetInputData).length > 0 && chatAssetInputData.file) {
       props.dispatch(
         chatAssetFileUploadStart({
-          from_user_id: localStorage.getItem("userId"),
+          from_user_id: localStorage?.getItem("userId"),
           to_user_id: props.toUserId,
           file_type: props.fileType,
           message: chatAssetInputData.message ? chatAssetInputData.message : "",
@@ -68,7 +68,7 @@ const ChatAssetModal = (props) => {
     <>
       <Modal
         className={`modal-dialog-center sent-tip-modal 
-                ${nullData.includes(localStorage.getItem("theme")) ?
+                ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
           }`}
         size="md"

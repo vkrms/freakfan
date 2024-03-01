@@ -14,7 +14,7 @@ const CreateContentCreatorModal = (props) => {
                 centered
                 size="md"
                 className={`become-content-creator-modal 
-                ${nullData.includes(localStorage.getItem("theme")) ?
+                ${nullData.includes(localStorage?.getItem("theme")) ?
                         "" : "dark-theme-modal"
                     }`}
             >

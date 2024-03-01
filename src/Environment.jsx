@@ -19,26 +19,11 @@ const apiUrl = "https://freak.fan/admin/api/user/";
 
 const Environment = {
   postMethod: async (action, object) => {
-    let userId =
-      localStorage.getItem("userId") !== "" &&
-      localStorage.getItem("userId") !== null &&
-      localStorage.getItem("userId") !== undefined
-        ? localStorage.getItem("userId")
-        : "";
+    let userId = localStorage?.getItem("userId") || "";
 
-    let accessToken =
-      localStorage.getItem("accessToken") !== "" &&
-      localStorage.getItem("accessToken") !== null &&
-      localStorage.getItem("accessToken") !== undefined
-        ? localStorage.getItem("accessToken")
-        : "";
+    let accessToken = localStorage?.getItem("accessToken") || "";
 
-    let deviceUniqueId =
-        localStorage.getItem("device_unique_id") !== "" &&
-        localStorage.getItem("device_unique_id") !== null &&
-        localStorage.getItem("device_unique_id") !== undefined
-          ? localStorage.getItem("device_unique_id")
-          : "";
+    let deviceUniqueId = localStorage?.getItem("device_unique_id") || "";
 
     const url = apiUrl + action;
 
@@ -96,23 +81,23 @@ const Environment = {
 
   getMethod: async (action, object) => {
     let userId =
-      localStorage.getItem("userId") !== "" &&
-      localStorage.getItem("userId") !== null &&
-      localStorage.getItem("userId") !== undefined
-        ? localStorage.getItem("userId")
+      localStorage?.getItem("userId") !== "" &&
+      localStorage?.getItem("userId") !== null &&
+      localStorage?.getItem("userId") !== undefined
+        ? localStorage?.getItem("userId")
         : "";
     let accessToken =
-      localStorage.getItem("accessToken") !== "" &&
-      localStorage.getItem("accessToken") !== null &&
-      localStorage.getItem("accessToken") !== undefined
-        ? localStorage.getItem("accessToken")
+      localStorage?.getItem("accessToken") !== "" &&
+      localStorage?.getItem("accessToken") !== null &&
+      localStorage?.getItem("accessToken") !== undefined
+        ? localStorage?.getItem("accessToken")
         : "";
 
     let deviceUniqueId =
-        localStorage.getItem("device_unique_id") !== "" &&
-        localStorage.getItem("device_unique_id") !== null &&
-        localStorage.getItem("device_unique_id") !== undefined
-          ? localStorage.getItem("device_unique_id")
+        localStorage?.getItem("device_unique_id") !== "" &&
+        localStorage?.getItem("device_unique_id") !== null &&
+        localStorage?.getItem("device_unique_id") !== undefined
+          ? localStorage?.getItem("device_unique_id")
           : "";
 
     const url = apiUrl + action;

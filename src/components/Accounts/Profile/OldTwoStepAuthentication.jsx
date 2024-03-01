@@ -7,7 +7,7 @@ import {twoStepAuthUpdateStart} from '../../../store/actions/UserAction'
 const OldTwoStepAuthentication = (props) => {
   const [password, setPassword] = useState("");
 
-  const [twoFactor, setTwoFactor] = useState(localStorage.getItem("is_two_step_auth_enabled") != undefined ? localStorage.getItem("is_two_step_auth_enabled") == 1 ? true : false : false)
+  const [twoFactor, setTwoFactor] = useState(localStorage?.getItem("is_two_step_auth_enabled") != undefined ? localStorage?.getItem("is_two_step_auth_enabled") == 1 ? true : false : false)
 
   const handleChange = (event) => {
     setTwoFactor(!twoFactor)

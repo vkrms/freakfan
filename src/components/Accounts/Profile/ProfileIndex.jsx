@@ -53,7 +53,7 @@ const ProfileIndex = (props) => {
         setSkip(take);
         if (props.profile.loading) {
             props.dispatch(fetchUserDetailsStart());
-            setBadgeStatus(localStorage.getItem("is_verified_badge"));
+            setBadgeStatus(localStorage?.getItem("is_verified_badge") ?? 0);
         }
     }, []);
 
@@ -185,15 +185,11 @@ const ProfileIndex = (props) => {
                                         <p>{t("posts")}</p>
                                     </div>
                                     <div className="sidebar-total-count-card">
-                                        <h5>{localStorage.getItem("total_followers")
-                                            ? localStorage.getItem("total_followers")
-                                            : 0}</h5>
+                                        <h5>{localStorage?.getItem("total_followers") ?? 0}</h5>
                                         <p>{t("fans")}</p>
                                     </div>
                                     <div className="sidebar-total-count-card">
-                                        <h5>{localStorage.getItem("total_followings")
-                                            ? localStorage.getItem("total_followings")
-                                            : 0}</h5>
+                                        <h5>{localStorage?.getItem("total_followings") ?? 0}</h5>
                                         <p>{t("following")}</p>
                                     </div>
                                 </div>

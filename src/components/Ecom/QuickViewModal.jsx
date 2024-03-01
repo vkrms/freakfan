@@ -52,10 +52,10 @@ const QuickViewModal = (props) => {
         centered
         size="lg"
         className={`quick-view-modal-sec 
-        ${localStorage.getItem("theme") !== "" &&
-            localStorage.getItem("theme") !== null &&
-            localStorage.getItem("theme") !== undefined &&
-            localStorage.getItem("theme") === "dark" ?
+        ${localStorage?.getItem("theme") !== "" &&
+            localStorage?.getItem("theme") !== null &&
+            localStorage?.getItem("theme") !== undefined &&
+            localStorage?.getItem("theme") === "dark" ?
             "dark-theme-modal" : ""
           }
         `}

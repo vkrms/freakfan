@@ -18,7 +18,7 @@ const ProductHeader = () => {
     <>
       <ul className="list-unstyled ecom-nav-link">
         <Media as="li">
-          {localStorage.getItem("is_content_creator") == 2 && (
+          {localStorage?.getItem("is_content_creator") == 2 && (
             <Link to="/product-list">
               <Image
                 className="add-product-img"
@@ -51,7 +51,7 @@ const ProductHeader = () => {
           </Link>
         </Media>
         <Media as="li">
-          {localStorage.getItem("is_content_creator") == 2 && (
+          {localStorage?.getItem("is_content_creator") == 2 && (
             <Link to="/add-product">
               <Image
                 className="add-product-img"

@@ -22,7 +22,7 @@ const SubscriptionPaymentModal = (props) => {
   const nullData = ["", null, undefined, "light"];
   const [skipRender, setSkipRender] = useState(true);
 
-  const [paymentType, setPaymentType] = useState(localStorage.getItem("default_payment_method"));
+  const [paymentType, setPaymentType] = useState(localStorage?.getItem("default_payment_method"));
   const [selectedCard, setSelectedCard] = useState(null);
   const [showAddCard, setShowAddCard] = useState(false);
 
@@ -86,7 +86,7 @@ const SubscriptionPaymentModal = (props) => {
     <>
       <div className="payment-modal-sec">
         <Modal
-          className={`modal-dialog-center user-list-free-modal payment-modal-res ${nullData.includes(localStorage.getItem("theme")) ?
+          className={`modal-dialog-center user-list-free-modal payment-modal-res ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
             }`}
           size="xl"

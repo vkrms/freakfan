@@ -166,7 +166,7 @@ const StorySlider = (props) => {
                     >
                       <div className="story-slider-img-sec">
                         <Image
-                          src={localStorage.getItem("user_picture")}
+                          src={localStorage?.getItem("user_picture")}
                           alt=""
                           className="story-slider-img"
                         />

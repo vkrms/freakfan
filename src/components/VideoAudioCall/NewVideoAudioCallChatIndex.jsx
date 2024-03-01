@@ -72,7 +72,7 @@ const NewVideoAudioCallChatIndex = (props) => {
                   <>
                     {props.data.map((message, index) => (
                       <div key={index}>
-                        {message.user_id == localStorage.getItem("userId") ? (
+                        {message.user_id == localStorage?.getItem("userId") ? (
                           <>
                             <div className="video-call-chat-right">
                               <div className="video-call-chat-bg">

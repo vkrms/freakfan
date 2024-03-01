@@ -16,7 +16,7 @@ import configuration from "react-global-configuration";
 import { translate, t } from "react-multi-lang";
 
 const AssetPaymentModal = (props) => {
-  const [paymentType, setPaymentType] = useState(localStorage.getItem("default_payment_method"));
+  const [paymentType, setPaymentType] = useState(localStorage?.getItem("default_payment_method"));
 
   const [showPayPal, payPal] = useState(false);
 
@@ -81,7 +81,7 @@ const AssetPaymentModal = (props) => {
     <>
       <Modal
         className={`modal-dialog-center sent-tip-modal 
-                ${nullData.includes(localStorage.getItem("theme")) ?
+                ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
           }`}
         size="md"

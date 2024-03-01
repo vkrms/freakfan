@@ -24,7 +24,7 @@ const AddCardModel = (props) => {
     <>
       <Modal
         className={`modal-dialog-center add-card-modal 
-        ${nullData.includes(localStorage.getItem("theme")) ?
+        ${nullData.includes(localStorage?.getItem("theme")) ?
           "" : "dark-theme-modal"
         }`}
         size="md"
@@ -51,7 +51,7 @@ const AddCardModel = (props) => {
             <div className="add-card-content-header">
               <Link to="#">
                 <div className="add-card-user-name">
-                  {localStorage.getItem("name")}
+                  {localStorage?.getItem("name")}
                   <Image
                     src={
                       configuration.get("configData.verified_badge_file")
@@ -62,7 +62,7 @@ const AddCardModel = (props) => {
                   />
                 </div>
               </Link>
-              <h6 className="sub-title">@{localStorage.getItem("username")}</h6>
+              <h6 className="sub-title">@{localStorage?.getItem("username")}</h6>
               <h4 className="title">{t("subscription_benefits")}:</h4>
               <div className="flex-center">
                 <ul className="list-unstyled">

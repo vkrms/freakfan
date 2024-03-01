@@ -27,7 +27,7 @@ const $ = window.$;
 
 const PaymentModal = (props) => {
   const [paymentType, setPaymentType] = useState(
-    localStorage.getItem("default_payment_method")
+    localStorage?.getItem("default_payment_method")
   );
 
   const [isOnlyWalletPayment, setIsOnlyWalletPayment] = useState(

@@ -26,7 +26,7 @@ const RegisterVerifyIndex = (props) => {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("userId") || !localStorage.getItem("accessToken")) {
+    if (!localStorage?.getItem("userId") || !localStorage?.getItem("accessToken")) {
       history.push('/');
     } else {
       props.dispatch(fetchUserDetailsStart());

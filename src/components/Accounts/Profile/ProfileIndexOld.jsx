@@ -34,7 +34,7 @@ const ProfileIndex = (props) => {
     if (props.posts.loading) props.dispatch(fetchPostsStart());
     if (props.profile.loading) {
       props.dispatch(fetchUserDetailsStart());
-      setBadgeStatus(localStorage.getItem("is_verified_badge"));
+      setBadgeStatus(localStorage?.getItem("is_verified_badge"));
     }
   }, []);
 
@@ -47,7 +47,7 @@ const ProfileIndex = (props) => {
   const onVerificationBadgeChange = (event) => {
     props.dispatch(updateVerifyBadgeStatusStart());
     setTimeout(() => {
-      setBadgeStatus(localStorage.getItem("is_verified_badge"));
+      setBadgeStatus(localStorage?.getItem("is_verified_badge"));
     }, 1000);
   };
 
@@ -189,8 +189,8 @@ const ProfileIndex = (props) => {
                       <Media as="li">
                         <Link to={"/fans"}>
                           <span className="fans-follow">
-                            {localStorage.getItem("total_followers")
-                              ? localStorage.getItem("total_followers")
+                            {localStorage?.getItem("total_followers")
+                              ? localStorage?.getItem("total_followers")
                               : 0}
                           </span>{" "}
                           {t("fans")}
@@ -199,8 +199,8 @@ const ProfileIndex = (props) => {
                       <Media as="li">
                         <Link to={"/following"}>
                           <span className="fans-follow">
-                            {localStorage.getItem("total_followings")
-                              ? localStorage.getItem("total_followings")
+                            {localStorage?.getItem("total_followings")
+                              ? localStorage?.getItem("total_followings")
                               : 0}
                           </span>{" "}
                           {t("following")}

@@ -147,7 +147,7 @@ const NewHomeIndex = (props) => {
                     </div>
                   </div> */}
                   <NewHomeSearch />
-                  {localStorage.getItem("is_content_creator") == 2 ? (
+                  {localStorage?.getItem("is_content_creator") == 2 ? (
                     <NewFeatureStoryIndex />
                   ) : null}
                   {/* <NewFeedIndex /> */}

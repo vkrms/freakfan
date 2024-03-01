@@ -64,7 +64,7 @@ const OldProfileIndex = (props) => {
     if (props.posts.loading) props.dispatch(fetchPostsStart({ type: "all" }));
     if (props.profile.loading) {
       props.dispatch(fetchUserDetailsStart());
-      setBadgeStatus(localStorage.getItem("is_verified_badge"));
+      setBadgeStatus(localStorage?.getItem("is_verified_badge"));
     }
   }, []);
 
@@ -77,7 +77,7 @@ const OldProfileIndex = (props) => {
   const onVerificationBadgeChange = (event) => {
     props.dispatch(updateVerifyBadgeStatusStart());
     setTimeout(() => {
-      setBadgeStatus(localStorage.getItem("is_verified_badge"));
+      setBadgeStatus(localStorage?.getItem("is_verified_badge"));
     }, 1000);
   };
 
@@ -130,7 +130,7 @@ const OldProfileIndex = (props) => {
   const handleChangeLang = ({ currentTarget: input }) => {
     console.log(input.value);
     setLanguage(input.value);
-    localStorage.setItem("lang", input.value);
+    localStorage?.setItem("lang", input.value);
     // window.location.reload();
   };
 
@@ -185,8 +185,8 @@ const OldProfileIndex = (props) => {
                                 <Link to="/fans">
                                   <span>
                                     <i className="fas fa-user-friends"></i>
-                                    {localStorage.getItem("total_followers")
-                                      ? localStorage.getItem("total_followers")
+                                    {localStorage?.getItem("total_followers")
+                                      ? localStorage?.getItem("total_followers")
                                       : 0}{" "}
                                     {t("fans")}
                                   </span>
@@ -222,8 +222,8 @@ const OldProfileIndex = (props) => {
                                 <Link to="/following">
                                   <span>
                                     <i className="fas fa-user-friends"></i>
-                                    {localStorage.getItem("total_followings")
-                                      ? localStorage.getItem("total_followings")
+                                    {localStorage?.getItem("total_followings")
+                                      ? localStorage?.getItem("total_followings")
                                       : 0}{" "}
                                     {t("following")}
                                   </span>
@@ -584,12 +584,12 @@ const OldProfileIndex = (props) => {
                           className="form-control mw-200 mb-3"
                           onChange={handleChangeLang}
                           name="lang"
-                          defaultValue={localStorage.getItem("lang")}
+                          defaultValue={localStorage?.getItem("lang")}
                         >
                           <option
                             value="en"
                             selected={
-                              localStorage.getItem("lang") == "en"
+                              localStorage?.getItem("lang") == "en"
                                 ? true
                                 : false
                             }
@@ -599,7 +599,7 @@ const OldProfileIndex = (props) => {
                           <option
                             value="es"
                             selected={
-                              localStorage.getItem("lang") == "es"
+                              localStorage?.getItem("lang") == "es"
                                 ? true
                                 : false
                             }

@@ -50,11 +50,11 @@ function* followUserAPI() {
         response.data.message
       );
       yield put(createNotification(notificationMessage));
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followers",
         JSON.stringify(response.data.data.total_followers)
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followings",
         JSON.stringify(response.data.data.total_followings)
       );
@@ -85,11 +85,11 @@ function* unFollowUserAPI() {
         response.data.message
       );
       yield put(createNotification(notificationMessage));
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followers",
         JSON.stringify(response.data.data.total_followers)
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followings",
         JSON.stringify(response.data.data.total_followings)
       );

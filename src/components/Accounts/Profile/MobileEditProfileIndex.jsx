@@ -826,7 +826,7 @@ const MobileEditProfileIndex = (props) => {
                                             })
                                           }
                                           disabled={
-                                            localStorage.getItem("is_subscription_enabled") == 1
+                                            localStorage?.getItem("is_subscription_enabled") == 1
                                               ? false
                                               : true
                                           }
@@ -842,7 +842,7 @@ const MobileEditProfileIndex = (props) => {
                                               monthly_amount: e.target.value,
                                             })}
                                             disabled={
-                                              localStorage.getItem("is_subscription_enabled") == 1
+                                              localStorage?.getItem("is_subscription_enabled") == 1
                                                 ? false
                                                 : true
                                             }
@@ -874,7 +874,7 @@ const MobileEditProfileIndex = (props) => {
                                             })
                                           }
                                           disabled={
-                                            localStorage.getItem("is_subscription_enabled") == 1
+                                            localStorage?.getItem("is_subscription_enabled") == 1
                                               ? false
                                               : true
                                           }
@@ -890,7 +890,7 @@ const MobileEditProfileIndex = (props) => {
                                               yearly_amount: e.target.value,
                                             })}
                                             disabled={
-                                              localStorage.getItem("is_subscription_enabled") == 1
+                                              localStorage?.getItem("is_subscription_enabled") == 1
                                                 ? false
                                                 : true
                                             }
@@ -901,7 +901,7 @@ const MobileEditProfileIndex = (props) => {
                                     </div>
                                   </div>
                                   <div className="help-text-for-add-bank-account">
-                                    {localStorage.getItem("is_subscription_enabled") == 1 ? (
+                                    {localStorage?.getItem("is_subscription_enabled") == 1 ? (
                                       <p>
                                         {t("you_can_change_the")}{" "}
                                         <Link to={`/add-bank`}>
@@ -959,7 +959,7 @@ const MobileEditProfileIndex = (props) => {
                                               })
                                             }
                                             disabled={
-                                              localStorage.getItem("is_subscription_enabled") == 1
+                                              localStorage?.getItem("is_subscription_enabled") == 1
                                                 ? false
                                                 : true
                                             }
@@ -975,7 +975,7 @@ const MobileEditProfileIndex = (props) => {
                                                 video_call_amount: e.target.value,
                                               })}
                                               disabled={
-                                                localStorage.getItem("is_subscription_enabled") == 1
+                                                localStorage?.getItem("is_subscription_enabled") == 1
                                                   ? false
                                                   : true
                                               }
@@ -1025,7 +1025,7 @@ const MobileEditProfileIndex = (props) => {
                                               })
                                             }
                                             disabled={
-                                              localStorage.getItem("is_subscription_enabled") == 1
+                                              localStorage?.getItem("is_subscription_enabled") == 1
                                                 ? false
                                                 : true
                                             }
@@ -1041,7 +1041,7 @@ const MobileEditProfileIndex = (props) => {
                                                 audio_call_amount: e.target.value,
                                               })}
                                               disabled={
-                                                localStorage.getItem("is_subscription_enabled") == 1
+                                                localStorage?.getItem("is_subscription_enabled") == 1
                                                   ? false
                                                   : true
                                               }

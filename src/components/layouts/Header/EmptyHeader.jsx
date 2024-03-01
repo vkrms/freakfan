@@ -29,7 +29,7 @@ const EmptyHeader = () => {
           </a>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-              {localStorage.getItem("userLoginStatus") == "true" ? (
+              {localStorage?.getItem("userLoginStatus") == "true" ? (
                 <li className="nav-item active">
                   <Link className="nav-link smooth" to={"/dashboard"}>
                     {t("dashboard")}

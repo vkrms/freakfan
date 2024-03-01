@@ -78,7 +78,7 @@ const AddWalletAmountModal = (props) => {
     <>
       <div className="payment-modal-sec">
         <Modal
-          className={`modal-dialog-center user-list-free-modal payment-modal-res ${nullData.includes(localStorage.getItem("theme")) ?
+          className={`modal-dialog-center user-list-free-modal payment-modal-res ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
             }`}
           size="xl"

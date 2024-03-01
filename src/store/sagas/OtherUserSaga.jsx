@@ -28,7 +28,7 @@ function* fetchOtherUserProfileAPI() {
     const inputData = yield select(
       (state) => state.otherUser.userDetails.inputData
     );
-    if (inputData.user_unique_id == localStorage.getItem("user_unique_id")) {
+    if (inputData.user_unique_id == localStorage?.getItem("user_unique_id")) {
       window.location.assign("/profile");
     }
     const response = yield api.postMethod("other_profile", inputData);
@@ -41,6 +41,7 @@ function* fetchOtherUserProfileAPI() {
       );
       yield put(checkLogoutStatus(response.data));
       yield put(createNotification(notificationMessage));
+      // alert('B')
       window.location.assign("/");
     }
   } catch (error) {

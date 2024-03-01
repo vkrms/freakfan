@@ -23,7 +23,7 @@ const EcomCartIndex = (props) => {
         <div className="ecom-navbar">
             <ul className="list-unstyled ecom-nav-link">
               <Media as="li">
-                {localStorage.getItem("is_content_creator") == 2 ? (
+                {localStorage?.getItem("is_content_creator") == 2 ? (
                   <Link to="/product-list">
                     <Image
                       className="add-product-img"

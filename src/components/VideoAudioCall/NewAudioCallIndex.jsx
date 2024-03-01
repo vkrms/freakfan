@@ -40,7 +40,7 @@ let chatSocket;
 const rtcclient = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 
 const NewAudioCallIndex = (props) => {
-  const history = useHistory();
+    const history = useHistory();
 
   const {
     localAudioTrack,
@@ -272,14 +272,14 @@ const NewAudioCallIndex = (props) => {
     if (inputMessage) {
       let chatData = [
         {
-          loggedin_user_id: localStorage.getItem("userId"),
-          user_id: localStorage.getItem("userId"),
+          loggedin_user_id: localStorage?.getItem("userId"),
+          user_id: localStorage?.getItem("userId"),
           model_id: props.singleAudioCall.data.audio_call_request.model_id,
           audio_call_request_id:
             props.singleAudioCall.data.audio_call_request.audio_call_request_id,
           message: inputMessage,
-          from_username: localStorage.getItem("username"),
-          from_userpicture: localStorage.getItem("user_picture"),
+          from_username: localStorage?.getItem("username"),
+          from_userpicture: localStorage?.getItem("user_picture"),
           audio_call_unique_id:
             props.singleAudioCall.data.audio_call_request
               .audio_call_request_unique_id,

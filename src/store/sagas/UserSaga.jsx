@@ -88,42 +88,42 @@ function* getUserDetailsAPI() {
 
     if (response.data.success) {
       yield put(fetchUserDetailsSuccess(response.data));
-      localStorage.setItem("user_picture", response.data.data.picture);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem("user_cover", response.data.data.cover);
-      localStorage.setItem("username", response.data.data.username);
-      localStorage.setItem("name", response.data.data.name);
-      localStorage.setItem(
+      localStorage?.setItem("user_picture", response.data.data.picture);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem("user_cover", response.data.data.cover);
+      localStorage?.setItem("username", response.data.data.username);
+      localStorage?.setItem("name", response.data.data.name);
+      localStorage?.setItem(
         "total_followers",
         response.data.data.total_followers
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followings",
         response.data.data.total_followings
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_subscription_enabled",
         response.data.data.is_subscription_enabled
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_document_verified",
         response.data.data.is_document_verified
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_verified_badge",
         response.data.data.is_verified_badge
           ? response.data.data.is_verified_badge
           : 0
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_content_creator",
         response.data.data.is_content_creator
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "default_payment_method",
         response.data.data.default_payment_method
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_two_step_auth_enabled",
         response.data.data.is_two_step_auth_enabled
       );
@@ -148,27 +148,27 @@ function* updateUserDetailsAPI(action) {
     const response = yield api.postMethod("update_profile", action.data);
     if (response.data.success) {
       yield put(updateUserDetailsSuccess(response.data));
-      localStorage.setItem("user_picture", response.data.data.picture);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem("user_cover", response.data.data.cover);
-      localStorage.setItem("name", response.data.data.name);
-      localStorage.setItem("username", response.data.data.username);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem(
+      localStorage?.setItem("user_picture", response.data.data.picture);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem("user_cover", response.data.data.cover);
+      localStorage?.setItem("name", response.data.data.name);
+      localStorage?.setItem("username", response.data.data.username);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem(
         "is_document_verified",
         response.data.data.is_document_verified
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_verified_badge",
         response.data.data.is_verified_badge
           ? response.data.data.is_verified_badge
           : 0
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_content_creator",
         response.data.data.is_content_creator
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "default_payment_method",
         response.data.data.default_payment_method
       );
@@ -195,11 +195,13 @@ function* userLoginAPI() {
   try {
     const userData = yield select((state) => state.users.loginInputData.data);
     const response = yield api.postMethod("login", userData);
+
+
     yield put(userLoginSuccess(response.data));
     if (response.data.success) {
-      localStorage.setItem("userId", response.data.data.user_id);
-      localStorage.setItem("accessToken", response.data.data.token);
-      localStorage.setItem("device_unique_id", response.data.data.device_unique_id);
+      localStorage?.setItem("userId", response.data.data.user_id);
+      localStorage?.setItem("accessToken", response.data.data.token);
+      localStorage?.setItem("device_unique_id", response.data.data.device_unique_id);
       if (response.data.code == 1001)
         window.location.assign("/register/verify");
       else {
@@ -209,45 +211,46 @@ function* userLoginAPI() {
           );
           yield put(createNotification(notificationMessage));
           window.location.assign("/verification");
-          localStorage.setItem("emailId", response.data.data.email);
+          localStorage?.setItem("emailId", response.data.data.email);
         } else {
-          localStorage.setItem("userLoginStatus", true);
-          localStorage.setItem("user_picture", response.data.data.picture);
-          localStorage.setItem("user_cover", response.data.data.cover);
-          localStorage.setItem("name", response.data.data.name);
-          localStorage.setItem("username", response.data.data.username);
-          localStorage.setItem("socket", true);
-          localStorage.setItem(
+          localStorage?.setItem("userLoginStatus", true);
+          localStorage?.setItem("user_picture", response.data.data.picture);
+          localStorage?.setItem("user_cover", response.data.data.cover);
+          localStorage?.setItem("name", response.data.data.name);
+          localStorage?.setItem("username", response.data.data.username);
+          localStorage?.setItem("socket", true);
+          localStorage?.setItem(
             "user_unique_id",
             response.data.data.user_unique_id
           );
-          localStorage.setItem(
+          localStorage?.setItem(
             "is_document_verified",
             response.data.data.is_document_verified
           );
-          localStorage.setItem(
+          localStorage?.setItem(
             "is_verified_badge",
             response.data.data.is_verified_badge
               ? response.data.data.is_verified_badge
               : 0
           );
-          localStorage.setItem(
+          localStorage?.setItem(
             "is_content_creator",
             response.data.data.is_content_creator
           );
-          localStorage.setItem(
+          localStorage?.setItem(
             "default_payment_method",
             response.data.data.default_payment_method
           );
-          localStorage.setItem(
+          localStorage?.setItem(
             "is_two_step_auth_enabled",
             response.data.data.is_two_step_auth_enabled
           );
-          localStorage.setItem("emailId", response.data.data.email);
+          localStorage?.setItem("emailId", response.data.data.email);
           const notificationMessage = getSuccessNotificationMessage(
             response.data.message
           );
           yield put(createNotification(notificationMessage));
+          
           if (userData.isReload) {
             window.location.reload();
           } else {
@@ -278,9 +281,9 @@ function* userRegisterAPI() {
     yield put(userRegisterSuccess(response.data));
 
     if (response.data.success) {
-      localStorage.setItem("userId", response.data.data.user_id);
-      localStorage.setItem("accessToken", response.data.data.token);
-      localStorage.setItem("device_unique_id", response.data.data.device_unique_id);
+      localStorage?.setItem("userId", response.data.data.user_id);
+      localStorage?.setItem("accessToken", response.data.data.token);
+      localStorage?.setItem("device_unique_id", response.data.data.device_unique_id);
       if (response.data.code == 1001) {
         const notificationMessage = getSuccessNotificationMessage(
           response.data.message
@@ -289,39 +292,39 @@ function* userRegisterAPI() {
         window.location.assign("/register/verify");
       }
       else {
-        localStorage.setItem("userLoginStatus", true);
-        localStorage.setItem("user_picture", response.data.data.picture);
-        localStorage.setItem("user_cover", response.data.data.cover);
-        localStorage.setItem("username", response.data.data.username);
-        localStorage.setItem("name", response.data.data.name);
-        localStorage.setItem("socket", true);
-        localStorage.setItem(
+        localStorage?.setItem("userLoginStatus", true);
+        localStorage?.setItem("user_picture", response.data.data.picture);
+        localStorage?.setItem("user_cover", response.data.data.cover);
+        localStorage?.setItem("username", response.data.data.username);
+        localStorage?.setItem("name", response.data.data.name);
+        localStorage?.setItem("socket", true);
+        localStorage?.setItem(
           "user_unique_id",
           response.data.data.user_unique_id
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_document_verified",
           response.data.data.is_document_verified
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_verified_badge",
           response.data.data.is_verified_badge
             ? response.data.data.is_verified_badge
             : 0
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_two_step_auth_enabled",
           response.data.data.is_two_step_auth_enabled
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_content_creator",
           response.data.data.is_content_creator
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "default_payment_method",
           response.data.data.default_payment_method
         );
-        localStorage.setItem("emailId", response.data.data.email);
+        localStorage?.setItem("emailId", response.data.data.email);
         const notificationMessage = getSuccessNotificationMessage(
           response.data.message
         );
@@ -424,19 +427,19 @@ function* registerVerify() {
 
     if (response.data.success) {
       yield put(registerVerifySuccess(response.data));
-      localStorage.setItem("userId", response.data.data.user_id);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem("accessToken", response.data.data.token);
-      localStorage.setItem("userLoginStatus", true);
-      localStorage.setItem("user_picture", response.data.data.picture);
-      localStorage.setItem("username", response.data.data.first_name);
-      localStorage.setItem(
+      localStorage?.setItem("userId", response.data.data.user_id);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem("accessToken", response.data.data.token);
+      localStorage?.setItem("userLoginStatus", true);
+      localStorage?.setItem("user_picture", response.data.data.picture);
+      localStorage?.setItem("username", response.data.data.first_name);
+      localStorage?.setItem(
         "is_verified_badge",
         response.data.data.is_verified_badge
           ? response.data.data.is_verified_badge
           : 0
       );
-      localStorage.setItem("socket", true);
+      localStorage?.setItem("socket", true);
       const notificationMessage = getSuccessNotificationMessage(
         response.data.message
       );
@@ -522,7 +525,7 @@ function* verificationBadgeStatusUpdateAPI() {
       const notificationMessage = getSuccessNotificationMessage(
         response.data.message
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_verified_badge",
         response.data.data.is_verified_badge
           ? response.data.data.is_verified_badge
@@ -595,11 +598,11 @@ function* saveBlockUserAPI() {
       );
       yield put(createNotification(notificationMessage));
 
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followers",
         response.data.data.total_followers
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "total_followings",
         response.data.data.total_followings
       );
@@ -683,18 +686,18 @@ function* resetPasswordAPI() {
     const response = yield api.postMethod("reset_password", inputData);
     yield put(resetPasswordSuccess(response.data));
     if (response.data.success) {
-      localStorage.setItem("userLoginStatus", true);
-      localStorage.setItem("user_picture", response.data.data.picture);
-      localStorage.setItem("user_cover", response.data.data.cover);
-      localStorage.setItem("name", response.data.data.name);
-      localStorage.setItem("username", response.data.data.username);
-      localStorage.setItem("socket", true);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem(
+      localStorage?.setItem("userLoginStatus", true);
+      localStorage?.setItem("user_picture", response.data.data.picture);
+      localStorage?.setItem("user_cover", response.data.data.cover);
+      localStorage?.setItem("name", response.data.data.name);
+      localStorage?.setItem("username", response.data.data.username);
+      localStorage?.setItem("socket", true);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem(
         "is_document_verified",
         response.data.data.is_document_verified
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_verified_badge",
         response.data.data.is_verified_badge
           ? response.data.data.is_verified_badge
@@ -703,8 +706,8 @@ function* resetPasswordAPI() {
       const notificationMessage = getSuccessNotificationMessage(
         response.data.message
       );
-      localStorage.setItem("userId", response.data.data.user_id);
-      localStorage.setItem("accessToken", response.data.data.token);
+      localStorage?.setItem("userId", response.data.data.user_id);
+      localStorage?.setItem("accessToken", response.data.data.token);
       yield put(createNotification(notificationMessage));
       window.location.assign("/");
     } else {
@@ -797,27 +800,27 @@ function* updateUserSubscriptionDetailsAPI() {
     const response = yield api.postMethod("update_profile", userData);
     if (response.data.success) {
       yield put(updateUserDetailsSuccess(response.data));
-      localStorage.setItem("user_picture", response.data.data.picture);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem("user_cover", response.data.data.cover);
-      localStorage.setItem("name", response.data.data.name);
-      localStorage.setItem("username", response.data.data.username);
-      localStorage.setItem("user_unique_id", response.data.data.user_unique_id);
-      localStorage.setItem(
+      localStorage?.setItem("user_picture", response.data.data.picture);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem("user_cover", response.data.data.cover);
+      localStorage?.setItem("name", response.data.data.name);
+      localStorage?.setItem("username", response.data.data.username);
+      localStorage?.setItem("user_unique_id", response.data.data.user_unique_id);
+      localStorage?.setItem(
         "is_document_verified",
         response.data.data.is_document_verified
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_verified_badge",
         response.data.data.is_verified_badge
           ? response.data.data.is_verified_badge
           : 0
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_content_creator",
         response.data.data.is_content_creator
       );
-      localStorage.setItem(
+      localStorage?.setItem(
         "default_payment_method",
         response.data.data.default_payment_method
       );
@@ -843,7 +846,7 @@ function* twoStepAuthenticationUpdateAPI(action) {
 
     if (response.data.success) {
       yield put(twoStepAuthUpdateSuccess(response.data));
-      localStorage.setItem(
+      localStorage?.setItem(
         "is_two_step_auth_enabled",
         response.data.data.is_two_step_auth_enabled
       );
@@ -870,47 +873,47 @@ function* twoStepAuthenticationLoginAPI(action) {
     const response = yield api.postMethod("two_step_auth_login", action.data);
     yield put(twoStepAuthenticationLoginSuccess(response.data));
     if (response.data.success) {
-      localStorage.setItem("userId", response.data.data.user_id);
-      localStorage.setItem("accessToken", response.data.data.token);
+      localStorage?.setItem("userId", response.data.data.user_id);
+      localStorage?.setItem("accessToken", response.data.data.token);
       if (response.data.code == 1001)
         window.location.assign("/register/verify");
       else {
-        localStorage.setItem("userLoginStatus", true);
-        localStorage.setItem("user_picture", response.data.data.picture);
-        localStorage.setItem("user_cover", response.data.data.cover);
-        localStorage.setItem("name", response.data.data.name);
-        localStorage.setItem("username", response.data.data.username);
-        localStorage.setItem("socket", true);
-        localStorage.setItem(
+        localStorage?.setItem("userLoginStatus", true);
+        localStorage?.setItem("user_picture", response.data.data.picture);
+        localStorage?.setItem("user_cover", response.data.data.cover);
+        localStorage?.setItem("name", response.data.data.name);
+        localStorage?.setItem("username", response.data.data.username);
+        localStorage?.setItem("socket", true);
+        localStorage?.setItem(
           "user_unique_id",
           response.data.data.user_unique_id
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_document_verified",
           response.data.data.is_document_verified
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_verified_badge",
           response.data.data.is_verified_badge
             ? response.data.data.is_verified_badge
             : 0
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_content_creator",
           response.data.data.is_content_creator
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "default_payment_method",
           response.data.data.default_payment_method
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_two_step_auth_enabled",
           response.data.data.is_two_step_auth_enabled
         );
         const notificationMessage = getSuccessNotificationMessage(
           response.data.message
         );
-        localStorage.setItem("emailId", response.data.data.email);
+        localStorage?.setItem("emailId", response.data.data.email);
         yield put(createNotification(notificationMessage));
         window.location.assign("/");
       }

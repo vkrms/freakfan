@@ -24,7 +24,7 @@ class AddCardSec extends Component {
     });
     if (this.props.stripe) {
       this.props.stripe
-        .createToken({ type: "card", name: localStorage.getItem("username") })
+        .createToken({ type: "card", name: localStorage?.getItem("username") })
         .then((payload) => {
           const inputData = {
             card_token: payload.token.id,

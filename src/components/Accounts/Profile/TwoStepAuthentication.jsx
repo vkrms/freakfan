@@ -13,8 +13,8 @@ const TwoStepAuthentication = (props) => {
     const [password, setPassword] = useState("");
     const [passwordVisible, setPasswordVisible] = useState(false);
 
-    const [initialValue, setInitialValue] = useState(localStorage.getItem("is_two_step_auth_enabled") != undefined ? localStorage.getItem("is_two_step_auth_enabled") == 1 ? true : false : false);
-    const [twoFactor, setTwoFactor] = useState(localStorage.getItem("is_two_step_auth_enabled") != undefined ? localStorage.getItem("is_two_step_auth_enabled") == 1 ? true : false : false)
+    const [initialValue, setInitialValue] = useState(localStorage?.getItem("is_two_step_auth_enabled") != undefined ? localStorage?.getItem("is_two_step_auth_enabled") == 1 ? true : false : false);
+    const [twoFactor, setTwoFactor] = useState(localStorage?.getItem("is_two_step_auth_enabled") != undefined ? localStorage?.getItem("is_two_step_auth_enabled") == 1 ? true : false : false)
 
     const handleChange = (event) => {
         setTwoFactor(!twoFactor)

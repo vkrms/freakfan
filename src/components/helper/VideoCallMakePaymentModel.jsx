@@ -21,7 +21,7 @@ import {
 import { Link } from "react-router-dom";
 
 const VideoCallMakePaymentModel = (props) => {
-  const [paymentType, setPaymentType] = useState(localStorage.getItem("default_payment_method"));
+  const [paymentType, setPaymentType] = useState(localStorage?.getItem("default_payment_method"));
 
   const [showPayPal, payPal] = useState(false);
 
@@ -99,7 +99,7 @@ const VideoCallMakePaymentModel = (props) => {
         onHide={props.closePaymentModal}
         centered
         size="lg"
-        className={`${nullData.includes(localStorage.getItem("theme")) ?
+        className={`${nullData.includes(localStorage?.getItem("theme")) ?
           "" : "dark-theme-modal"
           }`}
       >

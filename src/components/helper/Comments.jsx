@@ -34,7 +34,7 @@ const Comments = (props) => {
     const handleCommentSubmit = (event) => {
         event.preventDefault();
 
-        if(!localStorage.getItem("userId")) {
+        if(!localStorage?.getItem("userId")) {
             const notificationMessage = getErrorNotificationMessage(
                 t('login_to_continue')
             );
@@ -106,7 +106,7 @@ const Comments = (props) => {
                     <div className="user-picture">
                         <Link className="title-container-1" to="#">
                             <Image
-                            src={localStorage.getItem("user_picture") ? localStorage.getItem("user_picture") : window.location.origin + "/assets/images/user.png"}
+                            src={localStorage?.getItem("user_picture") ? localStorage?.getItem("user_picture") : window.location.origin + "/assets/images/user.png"}
                             className="user-image img-responsive"
                             />
                         </Link>

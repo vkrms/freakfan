@@ -8,7 +8,7 @@ const AddFavModal = (props) => {
     <>
       <Modal
         className={`modal-dialog-center 
-        ${nullData.includes(localStorage.getItem("theme")) ?
+        ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
           }`}
         size="md"

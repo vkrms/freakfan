@@ -78,7 +78,7 @@ const LiveStreamingCommentsUserPaidList = (props) => {
                     <Link
                       to={`/${
                         viewer.user_unique_id ===
-                        localStorage.getItem("user_unique_id")
+                        localStorage?.getItem("user_unique_id")
                           ? "profile"
                           : viewer.user_unique_id
                       }`}

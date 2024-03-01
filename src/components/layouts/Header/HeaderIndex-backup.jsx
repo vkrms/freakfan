@@ -60,15 +60,15 @@ const HeaderIndex = (props) => {
       chatSocket = io(chatSocketUrl, {
         query:
           `commonid:'user_id_` +
-          localStorage.getItem("userId") +
+          localStorage?.getItem("userId") +
           `',myid:` +
-          localStorage.getItem("userId"),
+          localStorage?.getItem("userId"),
       });
       chatSocket.emit("notification update", {
-        commonid: "user_id_" + localStorage.getItem("userId"),
-        myid: localStorage.getItem("userId"),
+        commonid: "user_id_" + localStorage?.getItem("userId"),
+        myid: localStorage?.getItem("userId"),
       });
-      if (localStorage.getItem("socket") == "true") {
+      if (localStorage?.getItem("socket") == "true") {
         chatSocket.on("notification", (newData) => {
           console.log(newData);
           setChatCount(newData.chat_notification);
@@ -103,7 +103,7 @@ const HeaderIndex = (props) => {
   };
   return (
     <>
-      {localStorage.getItem("userId") ? (
+      {localStorage?.getItem("userId") ? (
         <header className="main-header">
           <Container>
             <nav className="main-header-menu">
@@ -167,7 +167,7 @@ const HeaderIndex = (props) => {
                 ""
               )}
 
-              {localStorage.getItem("is_content_creator") == 2 ? (
+              {localStorage?.getItem("is_content_creator") == 2 ? (
                 <Link
                   to={"/add-post"}
                   className="main-header-menu icon-with-round-hover"
@@ -283,7 +283,7 @@ const HeaderIndex = (props) => {
               </Button>
             </nav>
 
-            {/* {localStorage.getItem("is_document_verified") == 3 ? (
+            {/* {localStorage?.getItem("is_document_verified") == 3 ? (
                   <div className="pl-2">
                     <Alert key={1} variant='danger'>
                       The user updated documents decined by Admin.
@@ -335,7 +335,7 @@ const HeaderIndex = (props) => {
           </Container>
         </header>
       )}
-      {isVisible && localStorage.getItem("userId") ? (
+      {isVisible && localStorage?.getItem("userId") ? (
         <div className="drawer" id="drawer-name" data-drawer-target>
           <div
             className="drawer__overlay"
@@ -349,7 +349,7 @@ const HeaderIndex = (props) => {
                 <Link to="#" className="l-sidebar__avatar" data-name="Profile">
                   <span className="sidebar-hamburger-user-profile">
                     <Image
-                      src={localStorage.getItem("user_picture")}
+                      src={localStorage?.getItem("user_picture")}
                       alt={configuration.get("configData.site_name")}
                     />
                   </span>
@@ -364,15 +364,15 @@ const HeaderIndex = (props) => {
                     onClick={() => setIsVisible(!isVisible)}
                   >
                     <h3 className="g-user-name">
-                      {localStorage.getItem("name")} {"  "}
-                      {localStorage.getItem("is_verified_badge") == 1 ? (
+                      {localStorage?.getItem("name")} {"  "}
+                      {localStorage?.getItem("is_verified_badge") == 1 ? (
                         <div className="pl-2">
                           <VerifiedBadgeNoShadow />
                         </div>
                       ) : null}
                     </h3>
                     <span className="user-id">
-                      @{localStorage.getItem("username")}
+                      @{localStorage?.getItem("username")}
                     </span>
                   </Link>
 
@@ -380,8 +380,8 @@ const HeaderIndex = (props) => {
                     <Media as="li">
                       <Link to={"/fans"} onClick={() => setIsVisible(false)}>
                         <span className="fans-follow">
-                          {localStorage.getItem("total_followers")
-                            ? localStorage.getItem("total_followers")
+                          {localStorage?.getItem("total_followers")
+                            ? localStorage?.getItem("total_followers")
                             : 0}
                         </span>{" "}
                         {t("fans")}
@@ -393,8 +393,8 @@ const HeaderIndex = (props) => {
                         onClick={() => setIsVisible(false)}
                       >
                         <span className="fans-follow">
-                          {localStorage.getItem("total_followings")
-                            ? localStorage.getItem("total_followings")
+                          {localStorage?.getItem("total_followings")
+                            ? localStorage?.getItem("total_followings")
                             : 0}
                         </span>{" "}
                         {t("following")}
@@ -439,7 +439,7 @@ const HeaderIndex = (props) => {
                   {t("my_profile")}
                 </Link>
 
-                {localStorage.getItem("is_content_creator") != 2 ? (
+                {localStorage?.getItem("is_content_creator") != 2 ? (
                   <Link
                     to={"/become-a-content-creator"}
                     className="sidebar-menus-item"

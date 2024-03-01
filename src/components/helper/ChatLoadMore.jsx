@@ -45,7 +45,7 @@ const ChatLoadMore = (props) => {
           props.dispatch(
             fetchChatMoreDataStart({
               to_user_id: props.toUserId,
-              from_user_id: localStorage.getItem("userId"),
+              from_user_id: localStorage?.getItem("userId"),
               skip: props.chatMessages.skip,
             })
           );

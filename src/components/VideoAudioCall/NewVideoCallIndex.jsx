@@ -38,8 +38,9 @@ import { createNotification } from "react-redux-notify/lib/modules/Notifications
 
 const rtcclient = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 let chatSocket;
+
 const VideoCallIndex = (props) => {
-  const {
+    const {
     localAudioTrack,
     localVideoTrack,
     leaveRtcChannel,
@@ -241,14 +242,14 @@ const VideoCallIndex = (props) => {
     if (inputMessage) {
       let chatData = [
         {
-          loggedin_user_id: localStorage.getItem("userId"),
-          user_id: localStorage.getItem("userId"),
+          loggedin_user_id: localStorage?.getItem("userId"),
+          user_id: localStorage?.getItem("userId"),
           model_id: props.singleVideoCall.data.video_call_request.model_id,
           video_call_request_id:
             props.singleVideoCall.data.video_call_request.video_call_request_id,
           message: inputMessage,
-          from_username: localStorage.getItem("username"),
-          from_userpicture: localStorage.getItem("user_picture"),
+          from_username: localStorage?.getItem("username"),
+          from_userpicture: localStorage?.getItem("user_picture"),
           video_call_unique_id:
             props.singleVideoCall.data.video_call_request
               .video_call_request_unique_id,

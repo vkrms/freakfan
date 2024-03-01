@@ -5,10 +5,10 @@ import LandingFooter from "./Footer/LandingFooter";
 
 const AuthLayout = (props) => {
   const [themeState, setThemeState] = useState(
-    localStorage.getItem("theme") !== "" &&
-      localStorage.getItem("theme") !== null &&
-      localStorage.getItem("theme") !== undefined &&
-      localStorage.getItem("theme") === "dark" ?
+    localStorage?.getItem("theme") !== "" &&
+      localStorage?.getItem("theme") !== null &&
+      localStorage?.getItem("theme") !== undefined &&
+      localStorage?.getItem("theme") === "dark" ?
       true
       : false
   );

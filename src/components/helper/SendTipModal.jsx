@@ -33,7 +33,7 @@ import { translate, t } from "react-multi-lang";
 const SendTipModal = (props) => {
   const [amount, setAmount] = useState(1);
   const [paymentType, setPaymentType] = useState(
-    localStorage.getItem("default_payment_method")
+    localStorage?.getItem("default_payment_method")
   );
   const [message, setMessage] = useState("");
   const [showPayPal, payPal] = useState(false);
@@ -150,7 +150,7 @@ const SendTipModal = (props) => {
         centered
         size="lg"
         className={`modal-dialog-center sent-tip-modal
-        ${nullData.includes(localStorage.getItem("theme")) ?
+        ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
           }
         `}

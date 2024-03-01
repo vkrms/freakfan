@@ -7,7 +7,7 @@ const CreatePollModal = () => {
   return (
     <div
       className={`modal fade 
-                ${nullData.includes(localStorage.getItem("theme")) ?
+                ${nullData.includes(localStorage?.getItem("theme")) ?
           "" : "dark-theme-modal"
         }`}
       id="pollDuration">

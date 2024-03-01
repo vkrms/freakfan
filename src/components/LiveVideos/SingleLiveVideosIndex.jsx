@@ -16,8 +16,8 @@ const SingleLiveVideosIndex = (props) => {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("username") != null) {
-      setUsername(localStorage.getItem("username"));
+    if (localStorage?.getItem("username") != null) {
+      setUsername(localStorage?.getItem("username"));
     }
     props.dispatch(
       fetchSingleLiveVideoStart({

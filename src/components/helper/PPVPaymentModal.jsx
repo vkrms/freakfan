@@ -32,7 +32,7 @@ import { translate, t } from "react-multi-lang";
 const PPVPaymentModal = (props) => {
   const [amount, setAmount] = useState(0);
   const [paymentType, setPaymentType] = useState(
-    localStorage.getItem("default_payment_method")
+    localStorage?.getItem("default_payment_method")
   );
 
   const [isOnlyWalletPayment, setIsOnlyWalletPayment] = useState(
@@ -150,7 +150,7 @@ const PPVPaymentModal = (props) => {
         onHide={props.closePPVPaymentModal}
         centered
         size="lg"
-        className={`${nullData.includes(localStorage.getItem("theme")) ?
+        className={`${nullData.includes(localStorage?.getItem("theme")) ?
           "" : "dark-theme-modal"
         }`}
       >

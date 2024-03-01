@@ -74,7 +74,7 @@ const GoLiveModal = (props) => {
       <Modal
         className={`modal-dialog-center sent-tip-modal go-live-modal 
           ${
-            nullData.includes(localStorage.getItem("theme"))
+            nullData.includes(localStorage?.getItem("theme"))
               ? ""
               : "dark-theme-modal"
           }`}

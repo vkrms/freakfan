@@ -49,7 +49,7 @@ const UserChatMobileRoom = (props) => {
   const [chatPayment, setPaymentModal] = useState(false);
   const [paymentData, setPaymentData] = useState({
     chat_message_id: 0,
-    from_user_id: localStorage.getItem("userId"),
+    from_user_id: localStorage?.getItem("userId"),
     to_user_id: toUserId,
     amount_formatted: 0,
     amount: 0,
@@ -84,7 +84,7 @@ const UserChatMobileRoom = (props) => {
 
   useEffect(() => {
     let to_user_id =
-      props.match.params.to_user_id == localStorage.getItem("userId")
+      props.match.params.to_user_id == localStorage?.getItem("userId")
         ? props.match.params.from_user_id
         : props.match.params.to_user_id;
     setToUserId(to_user_id);
@@ -125,20 +125,20 @@ const UserChatMobileRoom = (props) => {
       chatSocket = io(chatSocketUrl, {
         query:
           `commonid:'user_id_` +
-          localStorage.getItem("userId") +
+          localStorage?.getItem("userId") +
           `_to_user_id_` +
           to_user_id +
           `',myid:` +
-          localStorage.getItem("userId"),
+          localStorage?.getItem("userId"),
       });
       console.log("chatSocket", chatSocket);
       chatSocket.emit("update sender", {
         commonid:
           "user_id_" +
-          localStorage.getItem("userId") +
+          localStorage?.getItem("userId") +
           "_to_user_id_" +
           to_user_id,
-        myid: localStorage.getItem("userId"),
+        myid: localStorage?.getItem("userId"),
       });
       let chatContent;
       chatSocket.on("message", (newData) => {
@@ -163,16 +163,16 @@ const UserChatMobileRoom = (props) => {
     if (chatSocketUrl != undefined && inputMessage) {
       let chatData = [
         {
-          from_user_id: localStorage.getItem("userId"),
+          from_user_id: localStorage?.getItem("userId"),
           to_user_id: toUserId,
           message: inputMessage,
           type: "uu",
-          user_picture: localStorage.getItem("user_picture"),
-          loggedin_user_id: localStorage.getItem("userId"),
+          user_picture: localStorage?.getItem("user_picture"),
+          loggedin_user_id: localStorage?.getItem("userId"),
           created: Date(),
-          from_username: localStorage.getItem("username"),
-          from_displayname: localStorage.getItem("name"),
-          from_userpicture: localStorage.getItem("user_picture"),
+          from_username: localStorage?.getItem("username"),
+          from_displayname: localStorage?.getItem("name"),
+          from_userpicture: localStorage?.getItem("user_picture"),
           from_user_unique_id: "",
           to_username: "",
           to_displayname: "",
@@ -204,17 +204,17 @@ const UserChatMobileRoom = (props) => {
     if (chatSocketUrl != undefined && assetData && assetMessage) {
       let chatData = [
         {
-          from_user_id: localStorage.getItem("userId"),
+          from_user_id: localStorage?.getItem("userId"),
           to_user_id: toUserId,
           chat_message_id: assetMessage ? assetMessage.chat_message_id : "",
           message: assetMessage ? assetMessage.message : "",
           type: "uu",
-          user_picture: localStorage.getItem("user_picture"),
-          loggedin_user_id: localStorage.getItem("userId"),
+          user_picture: localStorage?.getItem("user_picture"),
+          loggedin_user_id: localStorage?.getItem("userId"),
           created: Date(),
-          from_username: localStorage.getItem("username"),
-          from_displayname: localStorage.getItem("name"),
-          from_userpicture: localStorage.getItem("user_picture"),
+          from_username: localStorage?.getItem("username"),
+          from_displayname: localStorage?.getItem("name"),
+          from_userpicture: localStorage?.getItem("user_picture"),
           from_user_unique_id: "",
           to_username: "",
           to_displayname: "",
@@ -237,17 +237,17 @@ const UserChatMobileRoom = (props) => {
 
       let chatMessageData = [
         {
-          from_user_id: localStorage.getItem("userId"),
+          from_user_id: localStorage?.getItem("userId"),
           to_user_id: toUserId,
           chat_message_id: assetMessage ? assetMessage.chat_message_id : "",
           message: assetMessage ? assetMessage.message : "",
           type: "uu",
-          user_picture: localStorage.getItem("user_picture"),
-          loggedin_user_id: localStorage.getItem("userId"),
+          user_picture: localStorage?.getItem("user_picture"),
+          loggedin_user_id: localStorage?.getItem("userId"),
           created: Date(),
-          from_username: localStorage.getItem("username"),
-          from_displayname: localStorage.getItem("name"),
-          from_userpicture: localStorage.getItem("user_picture"),
+          from_username: localStorage?.getItem("username"),
+          from_displayname: localStorage?.getItem("name"),
+          from_userpicture: localStorage?.getItem("user_picture"),
           from_user_unique_id: "",
           to_username: "",
           to_displayname: "",
@@ -470,11 +470,11 @@ const UserChatMobileRoom = (props) => {
                               (chatMessage, index) => (
                                 <>
                                   {chatMessage.from_user_id ==
-                                  localStorage.getItem("userId") ? (
+                                  localStorage?.getItem("userId") ? (
                                     <div className="user-message-right-align">
                                       <div className="user-message-user-img-sec">
                                         <Image
-                                          src={localStorage.getItem(
+                                          src={localStorage?.getItem(
                                             "user_picture"
                                           )}
                                           alt=""

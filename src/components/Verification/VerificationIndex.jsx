@@ -13,10 +13,10 @@ const VerificationIndex = (props) => {
   const [inputData, setInputData] = useState({});
   const history = useHistory();
 
-  const emailId = localStorage.getItem("emailId");
+  const emailId = localStorage?.getItem("emailId");
 
   useEffect(() => {
-    if (!localStorage.getItem("emailId")) {
+    if (!localStorage?.getItem("emailId")) {
       history.push("/");
     }
   }, []);

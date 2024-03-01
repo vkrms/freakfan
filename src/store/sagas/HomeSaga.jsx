@@ -49,31 +49,31 @@ function* fetchHomePostAPI(action) {
     if (response.data.success) {
       yield put(fetchHomePostsSuccess(response.data.data));
       if (response.data.data.user) {
-        localStorage.setItem(
+        localStorage?.setItem(
           "total_followers",
           response.data.data.user.total_followers
             ? response.data.data.user.total_followers
             : 0
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "total_followings",
           response.data.data.user.total_followings
             ? response.data.data.user.total_followings
             : 0
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_subscription_enabled",
           response.data.data.user.is_subscription_enabled
         );
-        localStorage.setItem("user_picture", response.data.data.user.picture);
-        localStorage.setItem("user_cover", response.data.data.user.cover);
-        localStorage.setItem("name", response.data.data.user.name);
-        localStorage.setItem("username", response.data.data.user.username);
-        localStorage.setItem(
+        localStorage?.setItem("user_picture", response.data.data.user.picture);
+        localStorage?.setItem("user_cover", response.data.data.user.cover);
+        localStorage?.setItem("name", response.data.data.user.name);
+        localStorage?.setItem("username", response.data.data.user.username);
+        localStorage?.setItem(
           "user_unique_id",
           response.data.data.user.user_unique_id
         );
-        localStorage.setItem(
+        localStorage?.setItem(
           "is_document_verified",
           response.data.data.user.is_document_verified
         );

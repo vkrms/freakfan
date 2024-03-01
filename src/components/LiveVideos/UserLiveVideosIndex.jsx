@@ -92,13 +92,13 @@ const UserLiveVideosIndex = (props) => {
               ))}
             </div>
           ) : props.liveVideos.data.videos.filter(
-              (liveVideo) => liveVideo.user_id != localStorage.getItem("userId")
+              (liveVideo) => liveVideo.user_id != localStorage?.getItem("userId")
             ).length > 0 ? (
             <div className="video-list-sec">
               {props.liveVideos.data.videos
                 .filter(
                   (liveVideo) =>
-                    localStorage.getItem("userId") != String(liveVideo.user_id)
+                    localStorage?.getItem("userId") != String(liveVideo.user_id)
                 )
                 .map((video) => (
                   <LiveDataCard video={video} key={video.live_video_id} />

@@ -97,7 +97,7 @@ const PostDisplayCard = (props) => {
   };
 
   const showCommentSection = (event, post_id) => {
-    if(!localStorage.getItem("userId")) {
+    if(!localStorage?.getItem("userId")) {
       const notificationMessage = getErrorNotificationMessage(
         t('login_to_continue')
       );
@@ -121,7 +121,7 @@ const PostDisplayCard = (props) => {
   const handleLike = (event, status) => {
     event.preventDefault();
 
-    if(!localStorage.getItem("userId")) {
+    if(!localStorage?.getItem("userId")) {
       const notificationMessage = getErrorNotificationMessage(
         t('login_to_continue')
       );
@@ -152,7 +152,7 @@ const PostDisplayCard = (props) => {
 
   const handleBookmark = (event, post, status) => {
     event.preventDefault();
-    if(!localStorage.getItem("userId")) {
+    if(!localStorage?.getItem("userId")) {
       const notificationMessage = getErrorNotificationMessage(
         t('login_to_continue')
       );
@@ -170,7 +170,7 @@ const PostDisplayCard = (props) => {
   };
   const handleBlockUser = (event, post) => {
     event.preventDefault();
-    if(localStorage.getItem("userId")) {
+    if(localStorage?.getItem("userId")) {
       setPostDisplayStatus(false);
       props.dispatch(saveBlockUserStart({ user_id: post.user_id }));
     } else {
@@ -330,14 +330,14 @@ const PostDisplayCard = (props) => {
                       </CopyToClipboard>
                       <Media as="li" className="divider"></Media>
 
-                      {localStorage.getItem("userId") != post.user_id ? (
+                      {localStorage?.getItem("userId") != post.user_id ? (
                         <Media as="li">
                           <Link
                             to="#"
                             // onClick={(event) => handleReportPost(event, post)}
                             onClick={() => 
                               {
-                                if(localStorage.getItem("userId")) {
+                                if(localStorage?.getItem("userId")) {
                                   setReportMode(true)
                                 } else {
                                   const notificationMessage = getErrorNotificationMessage(
@@ -362,7 +362,7 @@ const PostDisplayCard = (props) => {
                       </Media> */}
                       {/* Report Post with reasons end */}
 
-                      {localStorage.getItem("userId") != post.user_id ? (
+                      {localStorage?.getItem("userId") != post.user_id ? (
                         <Media as="li">
                           <Link
                             to="#"
@@ -581,10 +581,10 @@ const PostDisplayCard = (props) => {
                                   />
                                 : 
                                   <Link
-                                    to={localStorage.getItem("userId") ? "/post/" + post.post_unique_id : '#'}
+                                    to={localStorage?.getItem("userId") ? "/post/" + post.post_unique_id : '#'}
                                     onClick= {() =>
                                       {
-                                        if(!localStorage.getItem("userId")) {
+                                        if(!localStorage?.getItem("userId")) {
                                           
                                           const notificationMessage = getErrorNotificationMessage(
                                             t('login_to_continue')
@@ -805,13 +805,13 @@ const PostDisplayCard = (props) => {
                 />
               </Link>
               
-              {localStorage.getItem("userId") != post.user_id ? (
+              {localStorage?.getItem("userId") != post.user_id ? (
                 <Button
                   type="button"
                   className="g-icon"
                   onClick={() => 
                     {
-                      if(localStorage.getItem("userId")) {
+                      if(localStorage?.getItem("userId")) {
                         setSendTip(true)
                       } else {
                         const notificationMessage = getErrorNotificationMessage(
@@ -1031,9 +1031,9 @@ const PostDisplayCard = (props) => {
           
           <Comments key="index" post={post} currentIndex={props.index}/>
 
-          {localStorage.getItem("userId") !== "" &&
-          localStorage.getItem("userId") !== null &&
-          localStorage.getItem("userId") !== undefined ? (
+          {localStorage?.getItem("userId") !== "" &&
+          localStorage?.getItem("userId") !== null &&
+          localStorage?.getItem("userId") !== undefined ? (
             <>
               <SendTipModal
                 sendTip={sendTip}

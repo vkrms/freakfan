@@ -705,7 +705,7 @@ const EditProfileIndex = (props) => {
                                     })
                                   }
                                   disabled={
-                                    localStorage.getItem(
+                                    localStorage?.getItem(
                                       "is_subscription_enabled"
                                     ) == 1
                                       ? false
@@ -725,7 +725,7 @@ const EditProfileIndex = (props) => {
                                       })
                                     }
                                     disabled={
-                                      localStorage.getItem(
+                                      localStorage?.getItem(
                                         "is_subscription_enabled"
                                       ) == 1
                                         ? false
@@ -772,7 +772,7 @@ const EditProfileIndex = (props) => {
                                     })
                                   }
                                   disabled={
-                                    localStorage.getItem(
+                                    localStorage?.getItem(
                                       "is_subscription_enabled"
                                     ) == 1
                                       ? false
@@ -792,7 +792,7 @@ const EditProfileIndex = (props) => {
                                       })
                                     }
                                     disabled={
-                                      localStorage.getItem(
+                                      localStorage?.getItem(
                                         "is_subscription_enabled"
                                       ) == 1
                                         ? false
@@ -807,7 +807,7 @@ const EditProfileIndex = (props) => {
                             </div>
                           </div>
                           <div className="help-text-for-add-bank-account">
-                            {localStorage.getItem("is_subscription_enabled") ==
+                            {localStorage?.getItem("is_subscription_enabled") ==
                             1 ? (
                               <p>
                                 {t("you_can_change_the")}{" "}
@@ -880,7 +880,7 @@ const EditProfileIndex = (props) => {
                                       })
                                     }
                                     disabled={
-                                      localStorage.getItem(
+                                      localStorage?.getItem(
                                         "is_subscription_enabled"
                                       ) == 1
                                         ? false
@@ -900,7 +900,7 @@ const EditProfileIndex = (props) => {
                                         })
                                       }
                                       disabled={
-                                        localStorage.getItem(
+                                        localStorage?.getItem(
                                           "is_subscription_enabled"
                                         ) == 1
                                           ? false
@@ -969,7 +969,7 @@ const EditProfileIndex = (props) => {
                                       })
                                     }
                                     disabled={
-                                      localStorage.getItem(
+                                      localStorage?.getItem(
                                         "is_subscription_enabled"
                                       ) == 1
                                         ? false
@@ -989,7 +989,7 @@ const EditProfileIndex = (props) => {
                                         })
                                       }
                                       disabled={
-                                        localStorage.getItem(
+                                        localStorage?.getItem(
                                           "is_subscription_enabled"
                                         ) == 1
                                           ? false

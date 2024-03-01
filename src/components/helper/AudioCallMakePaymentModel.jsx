@@ -21,7 +21,7 @@ import { fetchWalletDetailsStart } from "../../store/actions/WalletAction";
 import { Link } from "react-router-dom";
 
 const AudioCallMakePaymentModel = (props) => {
-  const [paymentType, setPaymentType] = useState(localStorage.getItem("default_payment_method"));
+  const [paymentType, setPaymentType] = useState(localStorage?.getItem("default_payment_method"));
 
   const [showPayPal, payPal] = useState(false);
 
@@ -97,7 +97,7 @@ const AudioCallMakePaymentModel = (props) => {
         onHide={props.closePaymentModal}
         centered
         size="lg"
-        className={`${nullData.includes(localStorage.getItem("theme")) ?
+        className={`${nullData.includes(localStorage?.getItem("theme")) ?
           "" : "dark-theme-modal"
           }`}
       >

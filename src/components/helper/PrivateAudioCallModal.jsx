@@ -31,7 +31,7 @@ const PrivateAudioCallModal = (props) => {
     <>
       <Modal
         className={`modal-dialog-center sent-tip-modal
-        ${nullData.includes(localStorage.getItem("theme")) ?
+        ${nullData.includes(localStorage?.getItem("theme")) ?
             "" : "dark-theme-modal"
           }
         `}

@@ -31,7 +31,7 @@ import { translate, t } from "react-multi-lang";
 
 const PaymentModal = (props) => {
   const [paymentType, setPaymentType] = useState(
-    localStorage.getItem("default_payment_method")
+    localStorage?.getItem("default_payment_method")
   );
 
   const [isOnlyWalletPayment, setIsOnlyWalletPayment] = useState(
@@ -129,7 +129,7 @@ const PaymentModal = (props) => {
         onHide={props.closePaymentModal}
         centered
         size="lg"
-        className={`m${nullData.includes(localStorage.getItem("theme")) ?
+        className={`m${nullData.includes(localStorage?.getItem("theme")) ?
           "" : "dark-theme-modal"
           }`}
 

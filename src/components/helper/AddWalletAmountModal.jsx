@@ -85,7 +85,7 @@ const AddWalletAmountModal = (props) => {
         <>
             <Modal
                 className={`modal-dialog-center withdraw-modal 
-                ${nullData.includes(localStorage.getItem("theme")) ?
+                ${nullData.includes(localStorage?.getItem("theme")) ?
                         "" : "dark-theme-modal"
                     }`}
                 size="md"

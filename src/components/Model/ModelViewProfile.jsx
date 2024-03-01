@@ -187,7 +187,7 @@ const ModelViewProfile = (props) => {
     event.preventDefault();
     props.dispatch(
       saveChatUserStart({
-        from_user_id: localStorage.getItem("userId"),
+        from_user_id: localStorage?.getItem("userId"),
         to_user_id: user_id,
       })
     );

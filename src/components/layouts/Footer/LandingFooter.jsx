@@ -23,7 +23,7 @@ const LandingFooter = (props) => {
   const handleChangeLang = ({ currentTarget: input }) => {
     console.log(input.value);
     setLanguage(input.value);
-    localStorage.setItem("lang", input.value);
+    localStorage?.setItem("lang", input.value);
     // window.location.reload();
   };
 
@@ -264,12 +264,12 @@ const LandingFooter = (props) => {
                       <select className="form-control mw-200 mb-3" 
                         name="lang"
                         onChange={handleChangeLang}
-                        defaultValue={localStorage.getItem("lang")}
+                        defaultValue={localStorage?.getItem("lang")}
                         >
                         <option
                           value="en"
                           // selected={
-                          //     localStorage.getItem("lang") == "en" ? true : false
+                          //     localStorage?.getItem("lang") == "en" ? true : false
                           // }
                         >
                           {t("english")}
@@ -277,7 +277,7 @@ const LandingFooter = (props) => {
                         <option
                           value="es"
                           // selected={
-                          //     localStorage.getItem("lang") == "es" ? true : false
+                          //     localStorage?.getItem("lang") == "es" ? true : false
                           // }
                         >
                           {t("spanish")}
