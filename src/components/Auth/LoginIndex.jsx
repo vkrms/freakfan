@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Button, Container, Row, Col, Image, Form } from "react-bootstrap";
-import { getErrorNotificationMessage } from "../helper/NotificationMessage";
 import { Link } from "react-router-dom";
 import configuration from "react-global-configuration";
 import { translate, t } from "react-multi-lang";
@@ -17,9 +16,12 @@ import {
 } from "react-device-detect";
 import { Formik, Form as FORM, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { userLoginStart, userRegisterStart } from "../../store/actions/UserAction";
 import { connect } from "react-redux";
+
+import { userLoginStart, userRegisterStart } from "../../store/actions/UserAction";
+// import { getErrorNotificationMessage } from "../helper/NotificationMessage";
 import SocialButton from "../helper/SocialButton";
+import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 const LoginIndex = (props) => {
 
@@ -101,30 +103,32 @@ const LoginIndex = (props) => {
     );
   };
 
+  const video = useRef()
+
+  function replaceVideo(size) {
+    if (size === 'small') {
+      video.current.src = 'assets/images/bg-video-mobile.mp4';
+    } else {
+      video.current.src = 'assets/images/bg-video-desktop.mp4';
+    }
+  }
+
+  useBreakpoint(replaceVideo, 960);
+
   return (
     <>
       <div className="new-login-page-sec login-mobile-sec">
         <video
-          className="bg-video-desktop"
-          autoPlay="true"
-          loop="true"
-          muted="true"
+          className="bg-video"
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          playing={true}
+          ref={video}
           playsInline
           preload="auto"
-          playing="true"
         >
-          <source src="assets/images/bg-video-desktop.mp4" type="video/mp4" />
-        </video>
-        <video
-          className="bg-video-mobile"
-          autoPlay="true"
-          loop="true"
-          muted="true"
-          playsInline
-          preload="auto"
-          playing="true"
-        >
-          <source src="assets/images/bg-video-mobile.mp4" type="video/mp4" />
+          <source src="assets/images/bg-video-mobile.mp4" type="video/mp4" media="(max-width:960px) and (orientation: portrait)"/>
         </video>
 
         <div className="new-login-form">
