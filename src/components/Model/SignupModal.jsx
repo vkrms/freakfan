@@ -71,7 +71,7 @@ const SignupModal = (props) => {
       device_type: device_type,
       device_model: device_model,
       browser_type: browser_type,
-      isReload:1,
+      isReload:true,
     });
     
   }, []);

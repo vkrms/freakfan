@@ -80,7 +80,7 @@ const ChangePassword = (props) => {
                           <Col xl={6}>
                             <div className="form-group">
                               <Form.Label>{t("old_password")}</Form.Label>
-                              <div class="input-group">
+                              <div className="input-group">
                                 <Field
                                   type={oldPasswordVisible ? "text" : "password"}
                                   name="old_password"
@@ -88,7 +88,7 @@ const ChangePassword = (props) => {
                                   className={`no-padding form-control ${touched.old_password && errors.old_password ? "is-invalid" : ""}`}
                                   autoFocus={true}
                                 />
-                                <div class="input-group-append">
+                                <div className="input-group-append">
                                   <div
                                     onClick={() => setOldPasswordVisible(!oldPasswordVisible)}
                                     className="btn input-group-text"

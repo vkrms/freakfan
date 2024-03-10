@@ -16,16 +16,16 @@ const publicKey = apiConstants.REACT_APP_FIREBASE_PUBLIC_KEY;
 
 initializeApp(firebaseConfig);
 
-let messaging
+// let messaging
 
-try {
-  messaging = getMessaging();
-} catch (error) {
-  console.error(error.message)
-}
+// try {
+//   messaging = getMessaging();
+// } catch (error) {
+//   console.error(error.message)
+// }
 
 export const requestForToken = () => {
-    return getToken(messaging, { vapidKey: publicKey })
+    return getToken(getMessaging(), { vapidKey: publicKey })
       .then((currentToken) => {
         if (currentToken) {
           console.log('current token for client: ', currentToken);
@@ -43,7 +43,7 @@ export const requestForToken = () => {
 export const getFcmToken = async (setTokenFound) => {
     let currentToken = '';
     try {
-        currentToken = await getToken(messaging, { vapidKey: publicKey })
+        currentToken = await getToken(getMessaging(), { vapidKey: publicKey })
         .then((currentToken) => {
             if (currentToken) {
                 return currentToken;
@@ -65,7 +65,7 @@ export const getFcmToken = async (setTokenFound) => {
 
 export const onMessageListener = () => {
     new Promise((resolve) => {
-        onMessage(messaging, (payload) => {
+        onMessage(getMessaging(), (payload) => {
             console.log("payload", payload)
             resolve(payload);
         });

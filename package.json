@@ -20,6 +20,7 @@
     "bootstrap": "^4.6.2",
     "browser-image-compression": "^1.0.17",
     "buffer": "^6.0.3",
+    "caniuse-lite": "^1.0.30001589",
     "chart.js": "^3.9.1",
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.9",
@@ -39,7 +40,6 @@
     "multiselect-react-dropdown": "^1.6.11",
     "react": "^16.13.1",
     "react-add-to-calendar": "^0.1.5",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-adsense": "^0.1.0",
     "react-audio-player": "^0.17.0",
     "react-awesome-slider": "^4.1.0",
@@ -68,7 +68,6 @@
     "react-multistep-component": "0.0.5",
     "react-otp-input": "^2.4.0",
     "react-owl-carousel": "^2.3.3",
-    "react-paypal-express-checkout": "^1.0.5",
     "react-player": "^2.12.0",
     "react-redux": "^7.2.9",
     "react-redux-notify": "^4.2.1",
@@ -81,7 +80,7 @@
     "react-share": "^4.4.1",
     "react-slick": "^0.27.12",
     "react-social-login": "^3.4.17",
-    "react-stepzilla": "^7.0.0",
+    "react-stepzilla": "^6.0.2",
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.2.3",
@@ -92,7 +91,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_OPTIONS=\"--inspect=2595\" react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -111,5 +110,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

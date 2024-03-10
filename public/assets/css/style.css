@@ -11317,10 +11317,11 @@ button {
   transition: 0.4s;
   color: #000000;
   cursor: pointer;
+  font-size: 16;
 }
 
 .new-search-hover-btn > i {
-  font-size-adjust: 30px;
+  font-size: 11px;
 }
 
 a {
@@ -11361,35 +11362,6 @@ a {
   min-height: 100vh;
   overflow: hidden;
   line-height: 0;
-}
-.bg-video-desktop {
-  /* position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  bottom: 0;
-  right: 0; */
-}
-.bg-video-mobile {
-  display: none;
-}
-.bg-video-desktop video {
-  object-fit: cover;
-  /* min-height:100vh; */
-}
-.bg-video-mobile {
-  /* position: absolute;
-  left: 0;
-  top: 0;
-  bottom:0;
-  right:0; */
-  /* z-index: -1; */
-}
-.bg-video-mobile video {
-  object-fit: cover;
-  /* min-height:100vh; */
 }
 .new-register-sec {
   background-image: url("../images/sign-up-bg.jpg");
@@ -11499,17 +11471,12 @@ a {
   opacity: 0.7 !important;
 }
 
-.bg-video-desktop {
+.bg-video {
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
 
-.bg-video-mobile {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
 .profile-image {
   border-radius: 50% !important;
   border: 2px solid #6561e3 !important;

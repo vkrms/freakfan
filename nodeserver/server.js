@@ -83,13 +83,11 @@ io.on('connection', function (socket) {
 
                     if(res_data.data && res_data.data != undefined){
 
-                        chat_notification = res_data.data.chat_notification;
-                        
-                        bell_notification = res_data.data.bell_notification;
+                        const {chat_notification, bell_notification} = res_data.data;                        
 
                         console.log('notification_receiver', notification_receiver);
 
-                        let notification_data = {chat_notification:chat_notification, bell_notification:bell_notification};
+                        let notification_data = {chat_notification, bell_notification};
 
                         console.log('notification_data', notification_data);
 

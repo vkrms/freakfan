@@ -75,7 +75,7 @@ const TwoStepAuthentication = (props) => {
                                                 <Form autoComplete="new-password" onSubmit={handleSubmit}>
                                                     <Form.Group>
                                                         <Form.Label for="password">{t("password")}</Form.Label>
-                                                        <div class="input-group">
+                                                        <div className="input-group">
                                                             <Form.Control
                                                                 className="form-control"
                                                                 id="password"
@@ -88,7 +88,7 @@ const TwoStepAuthentication = (props) => {
                                                                 }
                                                                 autoFocus={true}
                                                             />
-                                                            <div class="input-group-append">
+                                                            <div className="input-group-append">
                                                                 <div
                                                                     onClick={() => setPasswordVisible(!passwordVisible)}
                                                                     className="btn input-group-text"

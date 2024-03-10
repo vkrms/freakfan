@@ -67,7 +67,7 @@ const DeleteAccount = (props) => {
                                                     <Col xl={6}>
                                                         <div className="form-group">
                                                             <Form.Label>{t("password")}</Form.Label>
-                                                            <div class="input-group">
+                                                            <div className="input-group">
                                                                 <Field
                                                                     type={deletePasswordVisible ? "text" : "password"}
                                                                     name="password"
@@ -76,7 +76,7 @@ const DeleteAccount = (props) => {
                                                                     validate={validatePassword}
                                                                     autoFocus={true}
                                                                 />
-                                                                <div class="input-group-append">
+                                                                <div className="input-group-append">
                                                                     <div
                                                                         onClick={() => setDeletePasswordVisible(!deletePasswordVisible)}
                                                                         className="btn input-group-text"

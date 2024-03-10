@@ -61,7 +61,7 @@ const LoginModal = (props) => {
         device_type: device_type,
         device_model: device_model,
         browser_type: browser_type,
-        isReload:1,
+        isReload:true,
       })
     }, []);
   
@@ -81,7 +81,7 @@ const LoginModal = (props) => {
           social_unique_id: user._profile.id,
           picture: user._profile.profilePicURL,
           login_by: "facebook",
-          isReload:1,
+          isReload:true,
         })
       );
     };
@@ -97,7 +97,7 @@ const LoginModal = (props) => {
           social_unique_id: user._profile.id,
           picture: user._profile.profilePicURL,
           login_by: "google",
-          isReload:1,
+          isReload:true,
         })
       );
     };

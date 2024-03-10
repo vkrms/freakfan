@@ -267,7 +267,7 @@
 .verificationCodeWrapper .inputsWrapper .code-input {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 .verificationCodeWrapper .inputsWrapper .code-label {
   margin: 0;

@@ -2038,10 +2038,7 @@ Version: 1.0
   .new-header-tab {
     gap: 3em;
   }
-  .bg-video-desktop {
-    display: none;
-  }
-  .bg-video-mobile {
+  .bg-video {
     display: block;
     /* height: 82vh; */
     object-fit: cover;

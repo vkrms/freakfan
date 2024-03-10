@@ -37,7 +37,7 @@ function* logoutStatusCheck() {
       const notificationMessage = getErrorNotificationMessage('Invalid Token. Login to Continue!');
       yield put(createNotification(notificationMessage));
       setTimeout(() => {
-        window.location.assign("/");
+                window.location.assign("/");
       }, 300);
     } else {
       console.log("Error Check false");

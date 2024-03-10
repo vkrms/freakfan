@@ -75,7 +75,7 @@ function* deleteAllLoginSessionAPI(action) {
         response.data.message
       );
       yield put(createNotification(notificationMessage));
-      window.location.assign("/");
+            window.location.assign("/");
     } else {
       yield put(deleteAllLoginSessionFailure(response.data.error));
       const notificationMessage = getErrorNotificationMessage(

@@ -19,9 +19,7 @@ import {
   SEARCH_USER_POST_START,
 } from "../actions/ActionConstant";
 
-import {
-  checkLogoutStatus,
-} from "../actions/ErrorAction";
+import { checkLogoutStatus } from "../actions/ErrorAction";
 
 function* fetchOtherUserProfileAPI() {
   try {
@@ -41,7 +39,6 @@ function* fetchOtherUserProfileAPI() {
       );
       yield put(checkLogoutStatus(response.data));
       yield put(createNotification(notificationMessage));
-      // alert('B')
       window.location.assign("/");
     }
   } catch (error) {

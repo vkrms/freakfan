@@ -44,6 +44,8 @@ const PostDisplayCard = (props) => {
   const { post } = props;
   let totalLikes = props.post.total_likes ? props.post.total_likes : 0;
 
+  console.count('this shit is not supposed to re-render this much')
+
   const [PPVPayment, setPPVPayment] = useState(false);
   const [sendTip, setSendTip] = useState(false);
   const [commentInputData, setCommentInputData] = useState({});
@@ -461,7 +463,7 @@ const PostDisplayCard = (props) => {
                                 )
                           }
                         >
-                          <div className="post-image" key={index}>
+                          <div className= "post-image" key={index}>
                             <div className="">
                               <div className="gallery js-gallery">
                                 {post.payment_info.is_user_needs_pay == 1 ? (
